@@ -1,0 +1,264 @@
+{
+    "products": [
+        {
+            "title": "ABID AMBRE",
+            "id": "product0",
+            "img": "perfume0.webp",
+            "type": "eau de parfume",
+            "quantity": 30,
+            "description": "Abid Ambre Eau De Parfum is a captivating perfume due to its floral base with a woody base and citrus notes that create the top-selling scent. It's one of the signature collections and among our most beloved and popular scents. When you first apply it, you'll be able to smell fresh and citrusy high notes of mandarin grapefruit and lemon. Then, you'll be able to feel the rich flowery middle notes that include roses and orchids as well as the lily. It is possible to smell the dry-down as a mix of sweet sandalwood, vanilla and musk. It lasts for a long time. It is described as a modern classic scent. It's easy to wear during the daytime and can be worn with professional attire that is smart. It can be worn alone in a formal and intimate evening setting.",
+            "price": 69.91,
+            "intensity": 3
+        },
+        {
+            "title": "GOLDEN DUST",
+            "id": "product1",
+            "img": "perfume1.webp",
+            "type": "eau de parfume",
+            "quantity": 20,
+            "description": "Musk's rich floral scent opens with a deep rose and sparkling grapefruit before moving into the creamy vanilla and sweet honeysuckle that make it the top-selling perfume.",
+            "price": 69.91,
+            "intensity": 2
+        },
+        {
+            "title": "AMBER ROSE",
+            "id": "product2",
+            "img": "perfume2.webp",
+            "type": "eau de parfume",
+            "quantity": 25,
+            "description": "Amber Rose is perfumed with sensual scents of wood and musk. It is a trendy scent with an uplifting sweet, sparkling, and sweet aroma. The fruity and bright tones of bergamot intensify the smell before it settles into the delicious melon and juicy pineapple. The exquisitely elegant scent seduces thanks to its woody, smoky base and floral and citrus fragrance, which crowned it as our most popular scent. The scent opens with fruity and fresh bergamot notes and is then delightful pineapple and sweet melon.",
+            "price": 79.91,
+            "intensity": 3
+        },
+        {
+            "title": "WOOD DE AMBER",
+            "id": "product3",
+            "img": "perfume3.webp",
+            "type": "eau de parfume",
+            "quantity": 18,
+            "description": "Sunnamusk's Wood de Amber is a lovely fragrance for both men and women that combines wood and amber notes. The scent opens with enticing fruity, citric, and spicy notes, before settling into the mellow intensity of Iris - Opulent Cedarwood, amber, and cedar in the base notes, making this a rare find for collectors. At its core, Wood de Amber is blended with sweet and earthy patchouli to create a sophisticated composition with a fresh, spirited personality.",
+            "price": 129.91,
+            "intensity": 3
+        },
+        {
+            "title": "MAJESTIC",
+            "id": "product4",
+            "img": "perfume4.webp",
+            "type": "eau de parfume",
+            "quantity": 25,
+            "description": "As good as its name, majestic is a fragrance for men adding to the appeal and attractiveness. The lavender base of the perfume is a shows topper.",
+            "price": 79.91,
+            "intensity": 2
+        },
+        {
+            "title": "VICTORY",
+            "id": "product5",
+            "img": "perfume5.webp",
+            "type": "eau de parfume",
+            "quantity": 40,
+            "description": "Victory is among our most popular scents from the classic collection , and is perfect for those who want an earthy, dark scent but fresh. It will remind you of long summer nights , with its fresh and refreshing and lively. It has high notes of orange, similar to the grapefruit and Kaffir lime, mixed with red fruit. The Victory perfume for men is a bright and optimistic scent that blends its middle notes, which include magnolia jasmine, and orange blossoms to make a unique scent. Additionally, it has an edgy base of dark and sensual patchouli accompanied by a spicy smoky scent, and dry amber to give an exotic animalistic undertone then you'll realize that this is an unbeatable and winning scent likely to not be forgotten by those they battle. This strong and unapologetic classic is great to add to your collection.",
+            "price": 59.91,
+            "intensity": 3
+        },
+        {
+            "title": "NIGHT ILLUSION",
+            "id": "product6",
+            "img": "perfume6.webp",
+            "type": "eau de parfume",
+            "quantity": 40,
+            "description": "This heavenly floral fruity scent packs a mouth-watering punch. The sweetness of juicy red fruits is complemented perfectly by watery florals at the heart. A sexy and mischievous fragrance with the strap-line magic begins at midnight. A delicious combination of florals and musks including freesia and amber.",
+            "price": 69.91,
+            "intensity": 3
+        },
+        {
+            "title": "ZEYARA",
+            "id": "product7",
+            "img": "perfume7.webp",
+            "type": "eau de parfume",
+            "quantity": 50,
+            "description": "The mindblowing scent reminds me of eating a slice of a tart, pink apple while seated next to fresh lilies. It is an excellent blend when paired with frangipani and bergamot.",
+            "price": 49.91,
+            "intensity": 2
+        },
+        {
+            "title": "SWEET ESCAPE",
+            "id": "product8",
+            "img": "perfume8.webp",
+            "type": "eau de parfume",
+            "quantity": 33,
+            "description": "The perfect perfume, Sweet Escape gives you a clean, liberating experience that erases all traces of unpleasant odours or chemical toxins. Citrus and the floral-woody sweetness of rose and wood provide a reviving opening scent. This sets the stage for the gentle cedar and geranium leaf scents that make up the bulk of the fragrance. The long-lasting aroma is supported by a lovely combination that evokes.",
+            "price": 69.91,
+            "intensity": 2
+        },
+        {
+            "title": "AFGAN OUD",
+            "id": "product9",
+            "img": "perfume9.webp",
+            "type": "eau de parfume",
+            "quantity": 43,
+            "description": "The fragrance that keeps you in touch with the Earth. The herbaceous and woody notes with vanilla flavour are perfect to add to your mystery.",
+            "price": 79.91,
+            "intensity": 3
+        },
+        {
+            "title": "EMIRATES",
+            "id": "oil0",
+            "img": "oil0.webp",
+            "type": "oil fragrance",
+            "quantity": 40,
+            "description": "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
+            "price": 24.99,
+            "intensity": 3
+        },
+        {
+            "title": "OUD MUQADDAS OIL",
+            "id": "oil1",
+            "img": "oil1.webp",
+            "type": "oil fragrance",
+            "quantity": 30,
+            "description": "Experience the epitome of elegance with Oud Muqaddas. Opening with floral accord, the fragrance develops to reveal Sandalwood, Cedarwood and White Musk. In the dry down, Golden Amber, Nagarmotha and a touch of Oud emerge.",
+            "price": 34.99,
+            "intensity": 2
+        },
+        {
+            "title": "SANDAL ROSE",
+            "id": "oil2",
+            "img": "oil2.webp",
+            "type": "oil fragrance",
+            "quantity": 35,
+            "description": "Give yourself to the depth of sandalwood and its sweetness with Sunnamusk's Sandal Rose. This perfume oil speaks of luxury that comes out of its smooth and elegant and spicy flavours.",
+            "price": 24.99,
+            "intensity": 2
+        },
+        {
+            "title": "SHAF X",
+            "id": "oil3",
+            "img": "oil3.webp",
+            "type": "oil fragrance",
+            "quantity": 38,
+            "description": "Get your hands on the forever-staying perfume oil that gives you a base of mesmerising citrus notes and yet it is perfect to behold your seductive truth. A balanced mix that is perfect to suit your balanced personality.",
+            "price": 24.99,
+            "intensity": 3
+        },
+        {
+            "title": "PINKY",
+            "id": "oil4",
+            "img": "oil4.webp",
+            "type": "oil fragrance",
+            "quantity": 48,
+            "description": "Experience the aromatic flair of various berries blended into a delectable oriental. The fragrance is beautiful, subtle, sweet, and suitable for women of all ages.",
+            "price": 24.99,
+            "intensity": 2
+        },
+        {
+            "title": "YOUTH SPIRIT",
+            "id": "oil5",
+            "img": "oil5.webp",
+            "type": "oil fragrance",
+            "quantity": 60,
+            "description": "Captivate your audience with this growing and lingering scent. Perfect for office days and lively night outs, it is a staple in a man's wardrobe.",
+            "price": 24.99,
+            "intensity": 3
+        },
+        {
+            "title": "OUD AL HARAMAIN",
+            "id": "oil6",
+            "img": "oil6.webp",
+            "type": "oil fragrance",
+            "quantity": 15,
+            "description": "If you desire to feel elegance and pricey for less, that's it. OUD Al HARAMAIN lingers longer than other fragrances, but it has a more pleasant scent and is more practical to use. Sunnamusk's Oud Al Haramain is a man's favourite.",
+            "price": 24.99,
+            "intensity": 2
+        },
+        {
+            "title": "OUD AL HARAMAIN",
+            "id": "oil6",
+            "img": "oil6.webp",
+            "type": "oil fragrance",
+            "quantity": 15,
+            "description": "If you desire to feel elegance and pricey for less, that's it. OUD Al HARAMAIN lingers longer than other fragrances, but it has a more pleasant scent and is more practical to use. Sunnamusk's Oud Al Haramain is a man's favourite.",
+            "price": 24.99,
+            "intensity": 2
+        },
+        {
+            "title": "ORIGINAL SERIES GIFT SET",
+            "id": "gift0",
+            "img": "gift0.webp",
+            "type": "gift box",
+            "quantity": 15,
+            "description": "The original series is inspired by intense ingredients from around the world. Each scent is a blend of unexpected fragrance accords that boast a wealth of opulent aromas. Fragrances are designed to wear solo or paired together. This Large gift set contains Golden Dust 50ml EDP x1, Night Illusion 50ml EDP x1, Soft Paradise 50ml EDP x1.",
+            "price": 199.99,
+            "intensity": 3
+        },
+        {
+            "title": "SOFT PARADISE GIFT SET",
+            "id": "gift1",
+            "img": "gift1.webp",
+            "type": "gift box",
+            "quantity": 17,
+            "description": "We have created a special bundle which includes Eau De Perfume, Candle, and Fragrance Oil in our best-selling scent. This Gift set contains Soft Paradise 50ml EDP x1, Soft Paradise 10 ml Oil x1, Soft Paradise Candle x1",
+            "price": 114.99,
+            "intensity": 3
+        },
+        {
+            "title": "NIGHT ILLUSION GIFT SET",
+            "id": "gift2",
+            "img": "gift2.webp",
+            "type": "gift box",
+            "quantity": 20,
+            "description": "We have created a special bundle which includes Eau De Perfume, Candle, and Fragrance Oil in our best-selling scent. This Gift set contains Night Illusion 50ml EDP x1, Night Illusion 10 ml Oil x1, Night IllusionCandle x1.",
+            "price": 114.99,
+            "intensity": 3
+        },
+        {
+            "title": "DISCOVERY PERFUME COLLECTION",
+            "id": "gift3",
+            "img": "gift3.webp",
+            "type": "gift box",
+            "quantity": 25,
+            "description": "A collection of Sunnamusk's most popular Eau De perfume spray. This set contains 5 samples 10ML : Abid Ambre, Victory, Wood De Ambre, Zeyara, Purple Love perfumes.",
+            "price": 59.99,
+            "intensity": 3
+        },
+        {
+            "title": "WOMEN'S FRAGRANCE OIL GIFT SET",
+            "id": "gift4",
+            "img": "gift4.webp",
+            "type": "gift box",
+            "quantity": 40,
+            "description": "A collection of Sunnamusk's most popular fragrance oils for Women. Perfect for any occasion. This set contains Night Illusion, Pinky, Soft Paradise.",
+            "price": 56.99,
+            "intensity": 3
+        },
+        {
+            "title": "DISCOVERY OIL COLLECTION",
+            "id": "gift5",
+            "img": "gift5.webp",
+            "type": "gift box",
+            "quantity": 50,
+            "description": "A collection of Sunnamusk's most popular fragrance oils. This set contains 5 samples 5ML: Abid Ambre,...",
+            "price": 54.99,
+            "intensity": 3
+        },
+        {
+            "title": "SCENTED CANDLE BUNDLE",
+            "id": "gift6",
+            "img": "gift6.webp",
+            "type": "gift box",
+            "quantity": 35,
+            "description": "A collection of Sunnamusk's most popular candles perfect for any occasion. This set contains Golden Dust , Night Illusion , Soft Paradise scented Candles.",
+            "price": 74.99,
+            "intensity": 2
+        },
+        {
+            "title": "EMERALD BURNER BUNDLE",
+            "id": "gift7",
+            "img": "gift7.webp",
+            "type": "gift box",
+            "quantity": 14,
+            "description": "A collection of Sunnamusk's most popular home fragrance. Perfect for any occasion. This set contains Emerald Bakhoor Burner, Sahara Bakhoor, Instant-Light Charcoal.",
+            "price": 64.99,
+            "intensity": 3
+        }
+    ]
+}

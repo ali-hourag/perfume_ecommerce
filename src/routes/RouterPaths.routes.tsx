@@ -10,12 +10,15 @@ export const RouterPaths: FC = () => {
                 <Routes>
                     <Route path="/" element={<Layout />} >
                         <Route index element={<HomePage />} />
-                        <Route path="/products" >
+                        <Route path="products">
                             <Route path=":productId" />
                         </Route>
-                        <Route path="/cart" />
-                        <Route path="/login" />
-                        <Route path="/register" />
+                        <Route path="profile">
+                            <Route path="login" />
+                            <Route path="register" />
+                        </Route>
+                        <Route path="cart" />
+                        <Route path="wishlist" />
                         <Route path="*" element={<Navigate replace to="/" />} />
                     </Route>
                 </Routes>
