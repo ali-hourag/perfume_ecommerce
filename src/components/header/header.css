@@ -1,5 +1,46 @@
 .header {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr 1fr;
+    align-items: center;
     width: 100vw;
     height: 10vh;
-    background-color: azure;
+}
+
+.header_icon-menu,
+.header_icon-search,
+.header_icon-cart {
+    width: 30px;
+    height: 30px;
+    margin-left: .5rem;
+}
+
+.header_icon-menu:hover,
+.header_icon-search:hover,
+.header_icon-cart:hover {
+    cursor: pointer;
+}
+
+.header_icon-search {
+    justify-self: flex-end;
+}
+
+.sidebar-left {
+    display: grid;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    height: 100vh;
+    background-color: black;
+    transition: 0.5s ease-out;
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+}
+
+.sidebar_icon-close {
+    justify-self: flex-end;
+    color: white;
+    width: 30px;
+    height: 30px;
 }
