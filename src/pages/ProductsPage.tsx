@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, FC } from "react";
 import { getProductsData } from "../api/FetchProducts";
 import { productType } from "../types/product";
 
 
-export const ProductsPage = () => {
+export const ProductsPage: FC = () => {
     const [products, setProducts] = useState<productType[]>([]);
 
     /**

@@ -5,9 +5,7 @@ import { HomePage } from "../pages/HomePage";
 import { ProductsPage } from "../pages/ProductsPage";
 
 export const RouterPaths: FC = () => {
-    /**
-     * Just paths can be added
-     */
+
     return (
         <>
             <BrowserRouter>

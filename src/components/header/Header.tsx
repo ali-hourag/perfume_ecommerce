@@ -1,27 +1,28 @@
-import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import './header.css'
-import { useState } from 'react';
+import { useState, FC } from 'react';
+import { SidebarLeft } from '../sidebarLeft/SidebarLeft';
 
-export const Header = () => {
-    const [sideBarWidth, setSideBarWidth] = useState<string>("0");
-    const handleMenuIcon = () => {
-        if (sideBarWidth === "0") setSideBarWidth("75")
-        else setSideBarWidth("0")
+export const Header: FC = () => {
+    const [sideBarState, setSideBarState] = useState<boolean>(false);
+
+    const handleMenuIcon = (): void => {
+        setSideBarState(true);
     }
-    const handleSidebarIconClose = () => {
-        setSideBarWidth("0")
+    const hideSideBarLeft = (): void => {
+        setSideBarState(false);
     }
+
     return (
-        <>
-            <header className="header">
-                <AiOutlineMenu class="header_icon-menu" onClick={handleMenuIcon} />
-                <img src="src/assets/img/sunnah-musk.avif" />
-                <AiOutlineSearch class="header_icon-search" />
-                <AiOutlineShoppingCart class="header_icon-cart" />
-            </header>
-            <div className="sidebar-left" style={{ width: `${sideBarWidth}vw` }}>
-                <AiOutlineClose className="sidebar_icon-close" onClick={handleSidebarIconClose} />
-            </div>
-        </>
+        <header className="header">
+            <AiOutlineMenu class="header_icon-menu" onClick={handleMenuIcon} />
+            <img src="src/assets/img/sunnah-musk.avif" />
+            <AiOutlineSearch class="header_icon-search" />
+            <AiOutlineShoppingCart class="header_icon-cart" />
+            <SidebarLeft
+                showSideBarLeft={sideBarState}
+                changeSideBarLeftState={hideSideBarLeft}
+            />
+        </header>
     )
 }

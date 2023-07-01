@@ -1,0 +1,28 @@
+.sidebar-left {
+    display: grid;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    height: 100vh;
+    background-color: black;
+    transition: 0.4s ease-out;
+    -webkit-transition: 0.4s ease-out;
+    -moz-transition: 0.4s ease-out;
+    -ms-transition: 0.4s ease-out;
+    -o-transition: 0.4s ease-out;
+}
+
+.sidebar_icon-close {
+    justify-self: flex-end;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.show-sidebar-left_true {
+    width: 100vw;
+}
+
+.show-sidebar-left_false {
+    width: 0vw;
+}
