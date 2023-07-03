@@ -15,10 +15,10 @@ export const Header: FC = () => {
 
     return (
         <header className="header">
-            <AiOutlineMenu class="header_icon-menu" onClick={handleMenuIcon} />
+            <AiOutlineMenu className="header_icon-menu" onClick={handleMenuIcon} />
             <img src="src/assets/img/sunnah-musk.avif" />
-            <AiOutlineSearch class="header_icon-search" />
-            <AiOutlineShoppingCart class="header_icon-cart" />
+            <AiOutlineSearch className="header_icon-search" />
+            <AiOutlineShoppingCart className="header_icon-cart" />
             <SidebarLeft
                 showSideBarLeft={sideBarState}
                 changeSideBarLeftState={hideSideBarLeft}

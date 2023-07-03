@@ -1,5 +1,10 @@
 .main {
     width: 100vw;
     height: 80vh;
-    background-color: bisque;
+    overflow-y: auto;
+}
+
+@font-face {
+    font-family: bilargy-font;
+    src: url(../assets/fonts/bilargy.otf);
 }

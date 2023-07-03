@@ -1,6 +1,6 @@
 import { useEffect, useState, FC } from "react";
-import { getProductsData } from "../api/FetchProducts";
-import { productType } from "../types/product";
+import { getProductsData } from "../../api/FetchProducts";
+import { productType } from "../../types/product";
 
 
 export const ProductsPage: FC = () => {

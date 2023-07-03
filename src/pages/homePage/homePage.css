@@ -1,0 +1,182 @@
+.home-page_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.home-page_entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 4rem;
+    width: 100vw;
+    aspect-ratio: 2/2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-page_entry_premium {
+    background-image: url("../../assets/img/premium-fragrances.webp");
+}
+
+.home-page_entry_oil {
+    background-image: url("../../assets/img/oil-fragrance.webp");
+}
+
+.home-page_entry_gift {
+    background-image: url("../../assets/img/gift-home-page.webp");
+}
+
+.entry-type_heading,
+.entry-info_heading {
+    color: antiquewhite
+}
+
+.entry-link {
+    background-color: antiquewhite;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.home-page_entry_delivery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 100vw;
+    aspect-ratio: 3/1;
+    padding-bottom: 0;
+    background-color: #212121;
+}
+
+
+.delivery-entry {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    min-width: 20rem;
+    height: 100%;
+}
+
+.delivery-entry_icon {
+    width: 3rem;
+    height: 3rem;
+    color: #DAA520;
+}
+
+.delivery-entry_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+.delivery-info-p1 {
+    font-size: 1.2rem;
+}
+
+.delivery-info-p2 {
+    font-size: .8rem;
+}
+
+
+.home-page_entry_info {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 250px;
+    overflow-y: auto;
+}
+
+.info-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-entry-title {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.newsletter,
+.need-help,
+.legal,
+.contact,
+.follow-us {
+    display: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-input-incorrect::placeholder {
+    color: red;
+}
+
+.newsletter-button,
+.need-help-button {
+    margin-left: 1rem;
+    background-color: #212121;
+    color: antiquewhite;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.need-help-textarea {
+    resize: none;
+}
+
+.need-help-textarea-incorrect::placeholder {
+    color: red;
+}
+
+.need-help-input {
+    width: 12rem;
+}
+
+.need-help-button {
+    margin-left: 1rem;
+}
+
+.follow-us_display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+}
+
+.follow-us_icon {
+    height: 2rem;
+    width: 2rem;
+    color: #212121;
+}
+
+.info-entry-div_display-block {
+    display: block;
+}

@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { FC } from "react";
 import { Layout } from "../Layout";
-import { HomePage } from "../pages/HomePage";
-import { ProductsPage } from "../pages/ProductsPage";
+import { HomePage } from "../pages/homePage/HomePage";
+import { ProductsPage } from "../pages/productsPage/ProductsPage";
 
 export const RouterPaths: FC = () => {
 
