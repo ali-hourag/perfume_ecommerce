@@ -12,9 +12,8 @@ export const RouterPaths: FC = () => {
                 <Routes>
                     <Route path="/" element={<Layout />} >
                         <Route index element={<HomePage />} />
-                        <Route path="products" element={<ProductsPage />}>
-                            <Route path=":productId" />
-                        </Route>
+                        <Route path="products" element={<ProductsPage />} />
+                        <Route path="products/:productId" />
                         <Route path="profile">
                             <Route path="login" />
                             <Route path="register" />

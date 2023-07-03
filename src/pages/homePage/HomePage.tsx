@@ -5,9 +5,9 @@ import { CgMathPlus } from "react-icons/cg";
 import { MdPayment } from "react-icons/md";
 import { GiReturnArrow } from "react-icons/gi";
 import { BiLogoInstagram, BiLogoTwitter, BiLogoYoutube, BiLogoTiktok } from "react-icons/bi"
-import "./homePage.css";
 import { Toaster } from "react-hot-toast";
 import { handleHelpButton, handleInfoClicked, handleSubscribeButton } from "../../utils/utils";
+import "./homePage.css";
 
 
 export const HomePage: FC = () => {
