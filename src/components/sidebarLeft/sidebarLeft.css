@@ -53,15 +53,7 @@
     padding-bottom: .5rem;
 }
 
-.sidebar-form_input {
-    width: 0;
-    height: 0;
-    opacity: 0;
-}
 
-.sidebar-form_input:checked+label {
-    border: 2px solid rgb(139, 69, 19);
-}
 
 .sidebar-form_label {
     display: flex;
@@ -69,7 +61,6 @@
     align-items: center;
     height: 2rem;
     padding: .5rem;
-    background-color: auto;
     background-color: rgb(218, 165, 32, .9);
     font-weight: bold;
     color: white;
@@ -80,6 +71,20 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
+.sidebar-form_input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.sidebar-form_input:checked+label {
+    border: 2px solid rgb(139, 69, 19);
+}
+
+/* .sidebar-form-top-seller_input:checked+label {
+    border: 2px solid rgb(139, 69, 19);
+} */
 
 .sidebar-form-btn {
     margin-top: 2rem;
