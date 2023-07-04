@@ -23,3 +23,13 @@
 .header_icon-search {
     justify-self: flex-end;
 }
+
+.cart-icon-container {
+    position: relative;
+}
+
+/*It takes this class from the footer.css, so it has to be
+adapted a little bit*/
+.icon-number_span.header-icon-number_span {
+    right: 5px;
+}

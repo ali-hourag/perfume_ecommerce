@@ -1,27 +1,35 @@
 import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import './header.css'
-import { useState, FC } from 'react';
+import { FC, useEffect } from 'react';
 import { SidebarLeft } from '../sidebarLeft/SidebarLeft';
+import { SidebarRight } from '../sidebarRight/SidebarRight';
+import { useSidebar } from '../../hooks/useSidebar';
 
 export const Header: FC = () => {
-    const [sideBarState, setSideBarState] = useState<boolean>(false);
+    const [sidebarLeft, sidebarRight] = useSidebar();
+    const { sidebarLeftState, showSidebarLeft, hideSidebarLeft } = sidebarLeft;
+    const { sidebarRightState, showSidebarRight, hideSidebarRight } = sidebarRight;
 
-    const handleMenuIcon = (): void => {
-        setSideBarState(true);
-    }
-    const hideSideBarLeft = (): void => {
-        setSideBarState(false);
-    }
+    useEffect(() => {
+        console.log(sidebarRightState);
+    }, [sidebarRightState])
 
     return (
         <header className="header">
-            <AiOutlineMenu className="header_icon-menu" onClick={handleMenuIcon} />
+            <AiOutlineMenu className="header_icon-menu" onClick={showSidebarLeft} />
             <img src="src/assets/img/sunnah-musk.avif" />
-            <AiOutlineSearch className="header_icon-search" />
-            <AiOutlineShoppingCart className="header_icon-cart" />
+            <AiOutlineSearch className="header_icon-search" onClick={showSidebarRight} />
+            <div className="cart-icon-container">
+                <AiOutlineShoppingCart className="header_icon-cart" />
+                <span className="icon-number_span header-icon-number_span">0</span>
+            </div>
             <SidebarLeft
-                showSideBarLeft={sideBarState}
-                changeSideBarLeftState={hideSideBarLeft}
+                showSidebarLeft={sidebarLeftState}
+                changeSidebarLeftState={hideSidebarLeft}
+            />
+            <SidebarRight
+                showSidebarRight={sidebarRightState}
+                changeSidebarRightState={hideSidebarRight}
             />
         </header>
     )
