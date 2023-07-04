@@ -20,6 +20,7 @@ export const setNewFilter = () => {
         if (priceFilterInputs[i].checked) priceSort = priceFilterInputs[i].id as PriceSort;
     }
     if (typeFilterInputs[3].checked) fragranceType = typeFilterInputs[3].id as ProductTypes;
+    if (forFilterInputs[3].checked) productFor = forFilterInputs[3].id as ProductFor;
     if (topSellerInput.checked) topSeller = true;
     const newFilter: Filters = { fragranceType, productFor, priceSort, topSeller }
     return newFilter

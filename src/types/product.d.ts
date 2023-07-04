@@ -14,12 +14,13 @@ export type ProductType = {
 
 export enum ProductTypes {
     all = "all",
-    eauDeParfum = "eau-de-parfum",
+    eauDeParfum = "eau-de-parfume",
     oilFragrance = "oil-fragrance",
     giftBox = "gift-box"
 }
 
 export enum ProductFor {
+    all = "for-all",
     him = "him",
     her = "her",
     both = "him-her"

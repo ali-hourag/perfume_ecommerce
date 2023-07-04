@@ -1,4 +1,4 @@
-import { PriceSort, ProductFor, ProductTypes } from "./product"
+import { PriceSort, ProductFor, ProductTypes } from "./product.d"
 
 export interface FilterContextTypes {
     filters: Filters,

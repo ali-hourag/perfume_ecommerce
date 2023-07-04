@@ -16,12 +16,6 @@
     -o-transition: 0.2s ease-out;
 }
 
-
-.sidebar-left-form {
-    display: flex;
-    flex-direction: column;
-}
-
 .sidebar_icon-close {
     justify-self: flex-end;
     margin: 1rem;
@@ -35,6 +29,11 @@
     -moz-border-radius: 3rem;
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
+}
+
+.sidebar-left-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .fieldset {
@@ -56,6 +55,12 @@
     padding-bottom: .5rem;
 }
 
+.sidebar-form_input {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
 
 .sidebar-form_label {
     display: flex;
@@ -74,19 +79,11 @@
     -o-border-radius: 10px;
 }
 
-.sidebar-form_input {
-    width: 0;
-    height: 0;
-    opacity: 0;
-}
-
 .sidebar-form_input:checked+label {
     border: 2px solid rgb(139, 69, 19);
 }
 
 .sidebar-form-btn {
-    margin-top: 2rem;
-    justify-self: center;
     align-self: center;
     text-align: center;
     width: 6rem;
@@ -99,10 +96,6 @@
     -o-border-radius: 20px;
 }
 
-.type-fragrance-filter_container {
-    height: 2rem
-}
-
 .sidebar-left-home,
 .sidebar-left-account {
     display: flex;
@@ -112,6 +105,7 @@
     width: 75%;
     border-top: 1px solid black;
 }
+
 
 .sidebar-form-link {
     display: flex;
@@ -129,6 +123,7 @@
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+
 
 .show-sidebar-left_true {
     width: 100vw;

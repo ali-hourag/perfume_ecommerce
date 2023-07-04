@@ -7,7 +7,7 @@ import { FilterContextTypes, Filters } from "../types/filterContextTypes";
 export const filterContext = createContext<FilterContextTypes>({
     filters: {
         fragranceType: ProductTypes.all,
-        productFor: ProductFor.both, priceSort: PriceSort.none, topSeller: false
+        productFor: ProductFor.all, priceSort: PriceSort.none, topSeller: false
     }, changeFilters: () => { }
 })
 
@@ -15,7 +15,7 @@ export const FilterProvider = ({ ...props }) => {
 
     const [filters, setFilters] = useState<Filters>({
         fragranceType: ProductTypes.all,
-        productFor: ProductFor.both, priceSort: PriceSort.none, topSeller: false
+        productFor: ProductFor.all, priceSort: PriceSort.none, topSeller: false
     });
 
     const changeFilters = (newFilters: Filters) => {

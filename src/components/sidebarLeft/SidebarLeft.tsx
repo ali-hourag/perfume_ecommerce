@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { sideBarLeftProps } from '../../types/propTypes';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { PriceSort, ProductFor, ProductTypes } from '../../types/product.d';
 import './sidebarLeft.css';
 import { useFilterContext } from '../../hooks/useFilters';
@@ -11,11 +11,13 @@ import { setNewFilter } from '../../utils/setNewFilter';
 export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSidebarLeftState }) => {
     const showSidebar = showSidebarLeft.toString();
     const { changeFilters } = useFilterContext();
+    const navigate = useNavigate();
 
     //meter en el menú, account, home y log out si nadie está logged
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         changeFilters(setNewFilter())
+        navigate("products");
     }
 
     useEffect(() => {
@@ -41,7 +43,9 @@ export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSideb
                 </fieldset>
                 <fieldset className="fieldset">
                     <legend className="legend">For</legend>
-                    <input type="radio" id={ProductFor.both} name="product-for" className="sidebar-form_input sidebar-form-input_for sidebar-form_input-checked" />
+                    <input type="radio" id={ProductFor.all} name="product-for" className="sidebar-form_input sidebar-form-input_for sidebar-form_input-checked" />
+                    <label htmlFor={ProductFor.all} className="sidebar-form_label">all</label>
+                    <input type="radio" id={ProductFor.both} name="product-for" className="sidebar-form_input sidebar-form-input_for" />
                     <label htmlFor={ProductFor.both} className="sidebar-form_label">Both</label>
                     <input type="radio" id={ProductFor.him} name="product-for" className="sidebar-form_input sidebar-form-input_for" />
                     <label htmlFor={ProductFor.him} className="sidebar-form_label">Him</label>
@@ -62,13 +66,15 @@ export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSideb
                     <input type="checkbox" id="top-seller" name="top-seller" className="sidebar-form_input sidebar-form-top-seller_input" />
                     <label htmlFor="top-seller" className="sidebar-form_label">top seller</label>
                 </fieldset>
-                <button className="sidebar-form-btn" type="submit" disabled={false}>APPLY</button>
+
+                <button className="sidebar-form-btn" type="submit" disabled={false} onClick={changeSidebarLeftState}>APPLY</button>
+
             </form>
             <div className="sidebar-left-home">
                 <NavLink to="/" className="sidebar-form-link" onClick={changeSidebarLeftState}>HOME</NavLink>
             </div>
             <div className="sidebar-left-account">
-                <NavLink to="/profile" className="sidebar-form-link" onClick={changeSidebarLeftState}>ACCOUNT</NavLink>
+                <NavLink to="profile" className="sidebar-form-link" onClick={changeSidebarLeftState}>ACCOUNT</NavLink>
             </div>
         </div>
     )
