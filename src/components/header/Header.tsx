@@ -1,6 +1,6 @@
 import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import './header.css'
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { SidebarLeft } from '../sidebarLeft/SidebarLeft';
 import { SidebarRight } from '../sidebarRight/SidebarRight';
 import { useSidebar } from '../../hooks/useSidebar';
@@ -10,9 +10,6 @@ export const Header: FC = () => {
     const { sidebarLeftState, showSidebarLeft, hideSidebarLeft } = sidebarLeft;
     const { sidebarRightState, showSidebarRight, hideSidebarRight } = sidebarRight;
 
-    useEffect(() => {
-        console.log(sidebarRightState);
-    }, [sidebarRightState])
 
     return (
         <header className="header">

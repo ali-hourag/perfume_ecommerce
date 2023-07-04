@@ -1,5 +1,5 @@
 import { useEffect, useState, FC } from "react";
-import { getProductsData } from "../../api/FetchProducts";
+import { getData } from "../../api/FetchProducts";
 import { productType } from "../../types/product";
 
 
@@ -13,7 +13,7 @@ export const ProductsPage: FC = () => {
      */
     useEffect((): void => {
         (async function fetchProductsData() {
-            const getProducts = await getProductsData();
+            const getProducts = await getData("products");
             setProducts(getProducts);
         })();
     }, [])

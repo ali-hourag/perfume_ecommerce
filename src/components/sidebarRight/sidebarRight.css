@@ -21,6 +21,26 @@
     justify-self: flex-start;
 }
 
+.search-product_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar-right_label-search {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.sidebar-right_input-search {
+    height: 3rem;
+    text-align: center;
+    border-color: rgb(218, 165, 32, .9);
+    border-style: solid;
+}
+
 .sidebar-right-true {
     right: 0px;
 }
