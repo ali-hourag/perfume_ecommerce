@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { sideBarLeftProps } from '../../types/propTypes';
 import { NavLink } from 'react-router-dom';
-import { ProductFor, ProductTypes } from '../../types/product';
+import { PriceSort, ProductFor, ProductTypes } from '../../types/product.d';
 import './sidebarLeft.css';
 
 
@@ -49,12 +49,12 @@ export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSideb
                 </fieldset>
                 <fieldset className="fieldset">
                     <legend className="legend">Sort by price</legend>
-                    <input type="radio" id="none" name="price" className="sidebar-form_input sidebar-form-input_price sidebar-form_input-checked" />
-                    <label htmlFor="none" className="sidebar-form_label">None</label>
-                    <input type="radio" id="expensive" name="price" className="sidebar-form_input sidebar-form-input_price" />
-                    <label htmlFor="expensive" className="sidebar-form_label">more expensive</label>
-                    <input type="radio" id="cheap" name="price" className="sidebar-form_input sidebar-form-input_price" />
-                    <label htmlFor="cheap" className="sidebar-form_label">more cheap</label>
+                    <input type="radio" id={PriceSort.none} name="price" className="sidebar-form_input sidebar-form-input_price sidebar-form_input-checked" />
+                    <label htmlFor={PriceSort.none} className="sidebar-form_label">None</label>
+                    <input type="radio" id={PriceSort.moreExpensive} name="price" className="sidebar-form_input sidebar-form-input_price" />
+                    <label htmlFor={PriceSort.moreExpensive} className="sidebar-form_label">more expensive</label>
+                    <input type="radio" id={PriceSort.cheaper} name="price" className="sidebar-form_input sidebar-form-input_price" />
+                    <label htmlFor={PriceSort.cheaper} className="sidebar-form_label">more cheap</label>
                 </fieldset>
                 <fieldset className="fieldset">
                     <legend className="legend">Get top sellers</legend>
@@ -69,7 +69,6 @@ export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSideb
             <div className="sidebar-left-account">
                 <NavLink to="/profile" className="sidebar-form-link" onClick={changeSidebarLeftState}>ACCOUNT</NavLink>
             </div>
-
         </div>
     )
 }

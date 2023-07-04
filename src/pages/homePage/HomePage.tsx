@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 import { handleHelpButton, handleInfoClicked, handleSubscribeButton } from "../../utils/utils";
 import { useProductsContext } from "../../hooks/useProducts";
 import { getData } from "../../api/FetchProducts";
-import { productType } from "../../types/product";
+import { ProductType } from "../../types/product.d";
 import "./homePage.css";
 
 
@@ -19,7 +19,7 @@ export const HomePage: FC = () => {
 
     if (products === null) {
         (async function getProducts() {
-            const fetchProducts: productType[] = await getData("products") as productType[];
+            const fetchProducts: ProductType[] = await getData("products") as ProductType[];
             changeProducts(fetchProducts);
         })();
     }

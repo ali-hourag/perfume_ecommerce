@@ -1,13 +1,13 @@
 import { createContext, useState } from "react"
-import { productType } from "../types/product"
+import { ProductType } from "../types/product"
 
-export const productsContext = createContext<{ products: productType[] | null, changeProducts: (newProducts: productType[]) => void }>
+export const productsContext = createContext<{ products: ProductType[] | null, changeProducts: (newProducts: ProductType[]) => void }>
     ({ products: null, changeProducts: () => { } });
 
 export const ProductsProvider = ({ ...props }) => {
-    const [products, setProducts] = useState<productType[] | null>(null);
+    const [products, setProducts] = useState<ProductType[] | null>(null);
 
-    const changeProducts = (newProducts: productType[]) => {
+    const changeProducts = (newProducts: ProductType[]) => {
         setProducts(newProducts);
     }
 

@@ -1,5 +1,5 @@
 
-export type productType = {
+export type ProductType = {
     title: string;
     id: string;
     img: string;
@@ -13,6 +13,7 @@ export type productType = {
 }
 
 export enum ProductTypes {
+    all = "all",
     eauDeParfum = "eau-de-parfum",
     oilFragrance = "oil-fragrance",
     giftBox = "gift-box"
@@ -22,4 +23,10 @@ export enum ProductFor {
     him = "him",
     her = "her",
     both = "him-her"
+}
+
+export enum PriceSort {
+    none = "none",
+    moreExpensive = "more-expensive",
+    cheaper = "cheaper"
 }

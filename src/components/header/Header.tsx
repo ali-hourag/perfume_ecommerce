@@ -1,9 +1,9 @@
 import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
-import './header.css'
 import { FC } from 'react';
 import { SidebarLeft } from '../sidebarLeft/SidebarLeft';
 import { SidebarRight } from '../sidebarRight/SidebarRight';
 import { useSidebar } from '../../hooks/useSidebar';
+import './header.css'
 
 export const Header: FC = () => {
     const [sidebarLeft, sidebarRight] = useSidebar();

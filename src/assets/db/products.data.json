@@ -300,5 +300,13 @@
             "price": 64.99,
             "intensity": 3
         }
+    ],
+    "users": [
+        {
+            "email": "guest@guest.com",
+            "name": "guest",
+            "password": "1234",
+            "cart": []
+        }
     ]
 }
