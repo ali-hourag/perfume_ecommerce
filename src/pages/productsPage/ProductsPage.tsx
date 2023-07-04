@@ -1,10 +1,10 @@
 import { useEffect, useState, FC } from "react";
 import { getData } from "../../api/FetchProducts";
-import { productType } from "../../types/product";
+import { ProductType } from "../../types/product";
 
 
 export const ProductsPage: FC = () => {
-    const [products, setProducts] = useState<productType[]>([]);
+    const [products, setProducts] = useState<ProductType[]>([]);
 
     /**
      * MAKE IT LOAD WITH A SPINNER WHILE THE API IS BEING FETCHED
@@ -13,7 +13,7 @@ export const ProductsPage: FC = () => {
      */
     useEffect((): void => {
         (async function fetchProductsData() {
-            const getProducts: productType[] = await getData("products") as productType[];
+            const getProducts: ProductType[] = await getData("products") as ProductType[];
             setProducts(getProducts);
         })();
     }, [])

@@ -4,17 +4,18 @@ import { sideBarLeftProps } from '../../types/propTypes';
 import { NavLink } from 'react-router-dom';
 import { PriceSort, ProductFor, ProductTypes } from '../../types/product.d';
 import './sidebarLeft.css';
+import { useFilterContext } from '../../hooks/useFilters';
+import { setNewFilter } from '../../utils/setNewFilter';
 
 
 export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSidebarLeftState }) => {
     const showSidebar = showSidebarLeft.toString();
+    const { changeFilters } = useFilterContext();
 
-
+    //meter en el menú, account, home y log out si nadie está logged
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        //Ver qué está checked y aplicar los filtros necesarios!!
-        //guardar el filtrado en un contexto
-        //meter en el menú, account, home y log out si nadie está logged
+        changeFilters(setNewFilter())
     }
 
     useEffect(() => {
@@ -29,8 +30,8 @@ export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSideb
             <form onSubmit={handleSubmit} className="sidebar-left-form">
                 <fieldset className="fieldset">
                     <legend className="legend">Type of fragrance</legend>
-                    <input type="radio" id="all" name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type sidebar-form_input-checked" />
-                    <label htmlFor="all" className="sidebar-form_label">All</label>
+                    <input type="radio" id={ProductTypes.all} name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type sidebar-form_input-checked" />
+                    <label htmlFor={ProductTypes.all} className="sidebar-form_label">All</label>
                     <input type="radio" id={ProductTypes.eauDeParfum} name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />
                     <label htmlFor={ProductTypes.eauDeParfum} className="sidebar-form_label">Perfume</label>
                     <input type="radio" id={ProductTypes.oilFragrance} name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />

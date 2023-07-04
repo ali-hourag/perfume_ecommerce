@@ -6,7 +6,7 @@ import { MdPayment } from "react-icons/md";
 import { GiReturnArrow } from "react-icons/gi";
 import { BiLogoInstagram, BiLogoTwitter, BiLogoYoutube, BiLogoTiktok } from "react-icons/bi"
 import { Toaster } from "react-hot-toast";
-import { handleHelpButton, handleInfoClicked, handleSubscribeButton } from "../../utils/utils";
+import { handleHelpButton, handleInfoClicked, handleSubscribeButton } from "../../utils/handleBtnFooterInfo";
 import { useProductsContext } from "../../hooks/useProducts";
 import { getData } from "../../api/FetchProducts";
 import { ProductType } from "../../types/product.d";
