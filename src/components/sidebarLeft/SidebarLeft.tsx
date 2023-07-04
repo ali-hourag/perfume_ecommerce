@@ -1,8 +1,9 @@
 import { FC, useEffect } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import './sidebarLeft.css';
 import { sideBarLeftProps } from '../../types/propTypes';
 import { NavLink } from 'react-router-dom';
+import { ProductFor, ProductTypes } from '../../types/product';
+import './sidebarLeft.css';
 
 
 export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSidebarLeftState }) => {
@@ -30,21 +31,21 @@ export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSideb
                     <legend className="legend">Type of fragrance</legend>
                     <input type="radio" id="all" name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type sidebar-form_input-checked" />
                     <label htmlFor="all" className="sidebar-form_label">All</label>
-                    <input type="radio" id="perfume" name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />
-                    <label htmlFor="perfume" className="sidebar-form_label">Perfume</label>
-                    <input type="radio" id="oil" name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />
-                    <label htmlFor="oil" className="sidebar-form_label">Oil</label>
-                    <input type="radio" id="gift" name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />
-                    <label htmlFor="gift" className="sidebar-form_label">Giftbox</label>
+                    <input type="radio" id={ProductTypes.eauDeParfum} name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />
+                    <label htmlFor={ProductTypes.eauDeParfum} className="sidebar-form_label">Perfume</label>
+                    <input type="radio" id={ProductTypes.oilFragrance} name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />
+                    <label htmlFor={ProductTypes.oilFragrance} className="sidebar-form_label">Oil</label>
+                    <input type="radio" id={ProductTypes.giftBox} name="type-products" className="sidebar-form_input sidebar-form-input_fragrance-type" />
+                    <label htmlFor={ProductTypes.giftBox} className="sidebar-form_label">Giftbox</label>
                 </fieldset>
                 <fieldset className="fieldset">
                     <legend className="legend">For</legend>
-                    <input type="radio" id="both" name="product-for" className="sidebar-form_input sidebar-form-input_for sidebar-form_input-checked" />
-                    <label htmlFor="both" className="sidebar-form_label">Both</label>
-                    <input type="radio" id="Him" name="product-for" className="sidebar-form_input sidebar-form-input_for" />
-                    <label htmlFor="Him" className="sidebar-form_label">Him</label>
-                    <input type="radio" id="Her" name="product-for" className="sidebar-form_input sidebar-form-input_for" />
-                    <label htmlFor="Her" className="sidebar-form_label">Her</label>
+                    <input type="radio" id={ProductFor.both} name="product-for" className="sidebar-form_input sidebar-form-input_for sidebar-form_input-checked" />
+                    <label htmlFor={ProductFor.both} className="sidebar-form_label">Both</label>
+                    <input type="radio" id={ProductFor.him} name="product-for" className="sidebar-form_input sidebar-form-input_for" />
+                    <label htmlFor={ProductFor.him} className="sidebar-form_label">Him</label>
+                    <input type="radio" id={ProductFor.her} name="product-for" className="sidebar-form_input sidebar-form-input_for" />
+                    <label htmlFor={ProductFor.her} className="sidebar-form_label">Her</label>
                 </fieldset>
                 <fieldset className="fieldset">
                     <legend className="legend">Sort by price</legend>

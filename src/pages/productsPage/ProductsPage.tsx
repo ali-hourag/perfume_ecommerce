@@ -13,7 +13,7 @@ export const ProductsPage: FC = () => {
      */
     useEffect((): void => {
         (async function fetchProductsData() {
-            const getProducts = await getData("products");
+            const getProducts: productType[] = await getData("products") as productType[];
             setProducts(getProducts);
         })();
     }, [])
