@@ -1,5 +1,5 @@
 
-export interface productType {
+export type productType = {
     title: string;
     id: string;
     img: string;

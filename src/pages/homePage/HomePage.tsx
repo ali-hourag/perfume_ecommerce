@@ -7,10 +7,23 @@ import { GiReturnArrow } from "react-icons/gi";
 import { BiLogoInstagram, BiLogoTwitter, BiLogoYoutube, BiLogoTiktok } from "react-icons/bi"
 import { Toaster } from "react-hot-toast";
 import { handleHelpButton, handleInfoClicked, handleSubscribeButton } from "../../utils/utils";
+import { useProductsContext } from "../../hooks/useProducts";
+import { getData } from "../../api/FetchProducts";
+import { productType } from "../../types/product";
 import "./homePage.css";
 
 
 export const HomePage: FC = () => {
+
+    const { products, changeProducts } = useProductsContext();
+
+    if (products === null) {
+        (async function getProducts() {
+            const fetchProducts: productType[] = await getData("products") as productType[];
+            changeProducts(fetchProducts);
+        })();
+    }
+
 
     return (
         <>
