@@ -1,7 +1,9 @@
 import { FC, useEffect, useState } from "react";
 import { useProductsContext } from "../../hooks/useProducts";
 import { useFilterContext } from "../../hooks/useFilters";
-import { PriceSort, ProductFor, ProductType, ProductTypes } from "../../types/product.d";
+import { PriceSort, ProductFor, ProductTypes } from "../../types/dataTypes/product.d";
+import { Product, UnavailableProducts } from "../../components";
+import "./productsPage.css";
 
 
 /**
@@ -13,13 +15,18 @@ export const ProductsPage: FC = () => {
     const { products } = useProductsContext();
     const { filters } = useFilterContext();
     const { fragranceType, productFor, priceSort, topSeller } = filters;
-    console.log(fragranceType);
+    const [existingProducts, setExistingProducts] = useState(true);
+
+    useEffect(() => {
+        const productsDiv: NodeListOf<HTMLDivElement> = document.querySelectorAll(".product-card");
+        if (productsDiv.length !== 0) setExistingProducts(true);
+        else setExistingProducts(false);
+    }, [filters])
 
     return (
         <section className="products-container">
+            {!existingProducts && <UnavailableProducts />}
             {products && products.filter(({ type }) => {
-                console.log(type);
-
                 if (fragranceType === ProductTypes.all) return true;
                 return type === fragranceType;
             }).filter((product) => {
@@ -33,10 +40,14 @@ export const ProductsPage: FC = () => {
                 if (priceSort === PriceSort.moreExpensive) return (a.price > b.price) ? -1 : 1;
                 return (a.price > b.price) ? 1 : -1;
             }).map((product) => (
-                <div className="product-card" key={product.id}>
-                    <img src={`src/assets/img/${product.img}`} />
-                    <p>{product.price}</p>
-                </div>
+                <Product
+                    key={product.id}
+                    id={product.id}
+                    title={product.title}
+                    price={product.price}
+                    intensity={product.intensity}
+                    img={product.img}
+                />
             ))}
         </section>
     )

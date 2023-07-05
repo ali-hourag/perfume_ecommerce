@@ -3,7 +3,6 @@ import { CiShoppingBasket, CiShoppingCart } from 'react-icons/ci';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { VscAccount } from 'react-icons/vsc';
 import { AiOutlineSearch } from 'react-icons/ai';
-
 import './footer.css'
 
 export const Footer: FC = () => {

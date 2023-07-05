@@ -41,6 +41,10 @@
     border-style: solid;
 }
 
+.sidebar-right_input-search:focus {
+    outline: none;
+}
+
 .sidebar-right_search-result {
     text-align: center;
 }
@@ -63,7 +67,7 @@
     height: 100px;
 }
 
-.product-card_img {
+.sidebar-product-card_img {
     height: 100%;
     width: 100%;
     background-color: rgb(211, 211, 211, .3);
@@ -71,7 +75,7 @@
     object-fit: cover;
 }
 
-.product-card_info {
+.sidebar-product-card_info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +83,7 @@
     padding-left: 1rem;
 }
 
-.product-card_info-p {
+.sidebar-product-card_info-p {
     text-align: center;
 }
 

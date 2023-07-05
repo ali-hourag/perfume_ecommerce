@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sidebarLeftTypes, sidebarRightTypes } from "../types/sidebarTypes";
+import { sidebarLeftTypes, sidebarRightTypes } from "../types/componentTypes/sidebarTypes";
 
 
 

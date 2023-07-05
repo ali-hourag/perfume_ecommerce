@@ -1,6 +1,6 @@
 import { createContext, useState } from "react"
-import { PriceSort, ProductFor, ProductTypes } from "../types/product.d"
-import { FilterContextTypes, Filters } from "../types/filterContextTypes";
+import { PriceSort, ProductFor, ProductTypes } from "../types/dataTypes/product.d"
+import { FilterContextTypes, Filters } from "../types/contextTypes/filterContextTypes";
 
 
 

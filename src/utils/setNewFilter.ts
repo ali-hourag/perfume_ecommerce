@@ -1,5 +1,5 @@
-import { Filters } from "../types/filterContextTypes";
-import { PriceSort, ProductFor, ProductTypes } from "../types/product.d";
+import { Filters } from "../types/contextTypes/filterContextTypes";
+import { PriceSort, ProductFor, ProductTypes } from "../types/dataTypes/product.d";
 
 
 export const setNewFilter = () => {

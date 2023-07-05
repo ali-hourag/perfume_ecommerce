@@ -1,12 +1,12 @@
 import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import { FC } from 'react';
-import { SidebarLeft } from '../sidebarLeft/SidebarLeft';
-import { SidebarRight } from '../sidebarRight/SidebarRight';
+import { SidebarLeft } from '.';
+import { SidebarRight } from '.';
 import { useSidebar } from '../../hooks/useSidebar';
-import './header.css'
 import { useProductsContext } from '../../hooks/useProducts';
-import { ProductType } from '../../types/product';
+import { ProductType } from '../../types/dataTypes/product.d';
 import { getData } from '../../api/FetchProducts';
+import './header.css'
 
 export const Header: FC = () => {
     const [sidebarLeft, sidebarRight] = useSidebar();

@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from "react"
-import { sideBarRightProps } from "../../types/propTypes"
+import { SideBarRightProps } from "../../../types/propTypes/propTypes"
 import { AiOutlineClose } from "react-icons/ai";
 import "./sidebarRight.css"
-import { useProductsContext } from "../../hooks/useProducts";
+import { useProductsContext } from "../../../hooks/useProducts";
 
 
-export const SidebarRight: FC<sideBarRightProps> = ({ showSidebarRight, changeSidebarRightState }) => {
+export const SidebarRight: FC<SideBarRightProps> = ({ showSidebarRight, changeSidebarRightState }) => {
     const { products } = useProductsContext();
     const [filterProducts, setFilterProducts] = useState<string>("")
     const [foundProducts, setFoundProducts] = useState<boolean>(false);
@@ -53,10 +53,10 @@ export const SidebarRight: FC<sideBarRightProps> = ({ showSidebarRight, changeSi
                         }).map(({ id, img, title, price }) => {
                             return (
                                 <li key={id} className="results-product-card">
-                                    <img src={`/src/assets/img/${img}`} className="product-card_img" />
-                                    <div className="product-card_info">
+                                    <img src={`/src/assets/img/${img}`} className="sidebar-product-card_img" />
+                                    <div className="sidebar-product-card_info">
                                         <h4>{title}</h4>
-                                        <p className="product-card_info-p">{price}&euro;</p>
+                                        <p className="sidebar-product-card_info-p">{price}&euro;</p>
                                     </div>
                                 </li>
                             )

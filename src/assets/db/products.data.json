@@ -306,7 +306,8 @@
             "email": "guest@guest.com",
             "name": "guest",
             "password": "1234",
-            "cart": []
+            "cart": [],
+            "wishlist": []
         }
     ]
 }

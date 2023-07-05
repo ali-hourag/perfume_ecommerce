@@ -3,7 +3,8 @@ export type UserType = {
     email: string,
     name: string,
     password: string,
-    cart: CartProduct[]
+    cart: CartProduct[],
+    wishlist: CartProduct[]
 }
 
 export type CartProduct = {

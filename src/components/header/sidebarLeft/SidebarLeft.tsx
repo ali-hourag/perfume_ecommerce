@@ -1,14 +1,14 @@
 import { FC, useEffect } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import { sideBarLeftProps } from '../../types/propTypes';
+import { SideBarLeftProps } from '../../../types/propTypes/propTypes';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { PriceSort, ProductFor, ProductTypes } from '../../types/product.d';
+import { PriceSort, ProductFor, ProductTypes } from '../../../types/dataTypes/product.d';
 import './sidebarLeft.css';
-import { useFilterContext } from '../../hooks/useFilters';
-import { setNewFilter } from '../../utils/setNewFilter';
+import { useFilterContext } from '../../../hooks/useFilters';
+import { setNewFilter } from '../../../utils/setNewFilter';
 
 
-export const SidebarLeft: FC<sideBarLeftProps> = ({ showSidebarLeft, changeSidebarLeftState }) => {
+export const SidebarLeft: FC<SideBarLeftProps> = ({ showSidebarLeft, changeSidebarLeftState }) => {
     const showSidebar = showSidebarLeft.toString();
     const { changeFilters } = useFilterContext();
     const navigate = useNavigate();

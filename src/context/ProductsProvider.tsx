@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import { ProductType } from "../types/product"
+import { ProductType } from "../types/dataTypes/product"
 
 export const productsContext = createContext<{ products: ProductType[] | null, changeProducts: (newProducts: ProductType[]) => void }>
     ({ products: null, changeProducts: () => { } });
