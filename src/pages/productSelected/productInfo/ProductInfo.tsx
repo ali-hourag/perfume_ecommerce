@@ -17,8 +17,13 @@ export const ProductInfo: FC<ProductInfoProps> = ({ product }) => {
         setCounter(prevState => prevState + 1);
     }
     const handleHeartClicked = () => {
-        setActiveHeart(true)
-        toast.success("Added to wishlist!");
+        if (!activeHeart) {
+            setActiveHeart(true)
+            toast.success("Added to wishlist!");
+        } else {
+            setActiveHeart(false)
+            toast.success("Removed from wishlist!");
+        }
     }
 
     return (
