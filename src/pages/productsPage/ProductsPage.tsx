@@ -3,8 +3,8 @@ import { useProductsContext } from "../../hooks/useProducts";
 import { useFilterContext } from "../../hooks/useFilters";
 import { PriceSort, ProductFor, ProductTypes } from "../../types/dataTypes/product.d";
 import { Product, UnavailableProducts } from "../../components";
-import "./productsPage.css";
 import { adjustScrollbar } from "../../utils/adjustScrollbar";
+import "./productsPage.css";
 
 
 /**
@@ -16,12 +16,19 @@ export const ProductsPage: FC = () => {
     const { products } = useProductsContext();
     const { filters } = useFilterContext();
     const { fragranceType, productFor, priceSort, topSeller } = filters;
-    const [existingProducts, setExistingProducts] = useState(true);
+    const [existingProducts, setExistingProducts] = useState<{ existing: boolean, firstLoad: boolean }>
+        ({ existing: true, firstLoad: true });
 
+    // To control when the UnavailableProducts component has to be shown.
+    // It indicates that there are no products matching the filters set by the user.
+    // In the firstLoad the products are still not rendered and it shows that filter
+    // are not matching when in reality the productsDiv are still not rendered at that
+    // time
     useEffect(() => {
         const productsDiv: NodeListOf<HTMLDivElement> = document.querySelectorAll(".product-card");
-        if (productsDiv.length !== 0) setExistingProducts(true);
-        else setExistingProducts(false);
+        if (productsDiv.length !== 0) setExistingProducts({ existing: true, firstLoad: false });
+        else if (existingProducts.firstLoad) setExistingProducts({ existing: true, firstLoad: false })
+        else setExistingProducts({ existing: false, firstLoad: false })
     }, [filters])
 
     useEffect(() => {
@@ -30,7 +37,7 @@ export const ProductsPage: FC = () => {
 
     return (
         <section className="products-container">
-            {!existingProducts && <UnavailableProducts />}
+            {!existingProducts.existing && <UnavailableProducts />}
             {products && products.filter(({ type }) => {
                 if (fragranceType === ProductTypes.all) return true;
                 return type === fragranceType;

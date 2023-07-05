@@ -3,12 +3,14 @@ import { SideBarRightProps } from "../../../types/propTypes/propTypes"
 import { AiOutlineClose } from "react-icons/ai";
 import "./sidebarRight.css"
 import { useProductsContext } from "../../../hooks/useProducts";
+import { useNavigate } from "react-router-dom";
 
 
 export const SidebarRight: FC<SideBarRightProps> = ({ showSidebarRight, changeSidebarRightState }) => {
     const { products } = useProductsContext();
     const [filterProducts, setFilterProducts] = useState<string>("")
     const [foundProducts, setFoundProducts] = useState<boolean>(false);
+    const navigate = useNavigate();
     const showSidebar = showSidebarRight.toString();
 
 
@@ -19,9 +21,11 @@ export const SidebarRight: FC<SideBarRightProps> = ({ showSidebarRight, changeSi
         } else setFoundProducts(false);
     }
 
-    //al clickarles nos llevan a la página de producto
-    //Crear un contexto con productos y quitar el useEffect de aquí
-    //crear contexto para filtrado
+    const handleEntryProductClicked = (id: string) => {
+        changeSidebarRightState();
+        navigate(`/products/${id}`);
+    }
+
     useEffect(() => {
         setFilterProducts("");
         setFoundProducts(false);
@@ -52,7 +56,7 @@ export const SidebarRight: FC<SideBarRightProps> = ({ showSidebarRight, changeSi
                             return productTitle.includes(filterProducts.toUpperCase());
                         }).map(({ id, img, title, price }) => {
                             return (
-                                <li key={id} className="results-product-card">
+                                <li key={id} className="results-product-card" onClick={() => handleEntryProductClicked(id)}>
                                     <img src={`/src/assets/img/${img}`} className="sidebar-product-card_img" />
                                     <div className="sidebar-product-card_info">
                                         <h4>{title}</h4>
@@ -63,7 +67,6 @@ export const SidebarRight: FC<SideBarRightProps> = ({ showSidebarRight, changeSi
                         })
                     }
                 </ul>
-
             </div>
         </div>
     )

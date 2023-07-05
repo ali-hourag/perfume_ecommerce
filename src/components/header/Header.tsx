@@ -6,6 +6,7 @@ import { useSidebar } from '../../hooks/useSidebar';
 import { useProductsContext } from '../../hooks/useProducts';
 import { ProductType } from '../../types/dataTypes/product.d';
 import { getData } from '../../api/FetchProducts';
+import { useNavigate } from 'react-router-dom';
 import './header.css'
 
 export const Header: FC = () => {
@@ -13,6 +14,7 @@ export const Header: FC = () => {
     const { sidebarLeftState, showSidebarLeft, hideSidebarLeft } = sidebarLeft;
     const { sidebarRightState, showSidebarRight, hideSidebarRight } = sidebarRight;
     const { products, changeProducts } = useProductsContext();
+    const navigate = useNavigate();
 
     if (products === null) {
         (async function getProducts() {
@@ -21,10 +23,14 @@ export const Header: FC = () => {
         })();
     }
 
+    const handleLogoClicked = () => {
+        navigate("/");
+    }
+
     return (
         <header className="header">
             <AiOutlineMenu className="header_icon-menu" onClick={showSidebarLeft} />
-            <img src="src/assets/img/sunnah-musk.avif" />
+            <img src="/src/assets/img/sunnah-musk.avif" onClick={handleLogoClicked} />
             <AiOutlineSearch className="header_icon-search" onClick={showSidebarRight} />
             <div className="cart-icon-container">
                 <AiOutlineShoppingCart className="header_icon-cart" />

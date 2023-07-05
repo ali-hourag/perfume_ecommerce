@@ -3,6 +3,7 @@ import { FC } from "react";
 import { Layout } from "../Layout";
 import { HomePage } from "../pages/homePage/HomePage";
 import { ProductsPage } from "../pages/productsPage/ProductsPage";
+import { ProductSelected } from "../pages/productSelected/ProductSelected";
 
 export const RouterPaths: FC = () => {
 
@@ -13,7 +14,7 @@ export const RouterPaths: FC = () => {
                     <Route path="/" element={<Layout />} >
                         <Route index element={<HomePage />} />
                         <Route path="products" element={<ProductsPage />} />
-                        <Route path="products/:productId" />
+                        <Route path="products/:productId" element={<ProductSelected />} />
                         <Route path="profile">
                             <Route path="login" />
                             <Route path="register" />
