@@ -1,7 +1,8 @@
 .main {
     width: 100vw;
     height: 80vh;
-    overflow-y: auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 @font-face {

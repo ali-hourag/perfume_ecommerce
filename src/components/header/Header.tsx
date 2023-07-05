@@ -21,7 +21,6 @@ export const Header: FC = () => {
         })();
     }
 
-
     return (
         <header className="header">
             <AiOutlineMenu className="header_icon-menu" onClick={showSidebarLeft} />

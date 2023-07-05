@@ -4,6 +4,7 @@ import { useFilterContext } from "../../hooks/useFilters";
 import { PriceSort, ProductFor, ProductTypes } from "../../types/dataTypes/product.d";
 import { Product, UnavailableProducts } from "../../components";
 import "./productsPage.css";
+import { adjustScrollbar } from "../../utils/adjustScrollbar";
 
 
 /**
@@ -22,6 +23,10 @@ export const ProductsPage: FC = () => {
         if (productsDiv.length !== 0) setExistingProducts(true);
         else setExistingProducts(false);
     }, [filters])
+
+    useEffect(() => {
+        adjustScrollbar();
+    })
 
     return (
         <section className="products-container">

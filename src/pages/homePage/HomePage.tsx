@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { FC, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { CgMathPlus } from "react-icons/cg";
 import { MdPayment } from "react-icons/md";
@@ -7,10 +7,26 @@ import { GiReturnArrow } from "react-icons/gi";
 import { BiLogoInstagram, BiLogoTwitter, BiLogoYoutube, BiLogoTiktok } from "react-icons/bi"
 import { Toaster } from "react-hot-toast";
 import { handleHelpButton, handleInfoClicked, handleSubscribeButton } from "../../utils/handleBtnFooterInfo";
+import { useFilterContext } from "../../hooks/useFilters";
+import { ProductTypes } from "../../types/dataTypes/product.d";
+import { adjustScrollbar } from "../../utils/adjustScrollbar";
 import "./homePage.css";
 
 
 export const HomePage: FC = () => {
+    const { filters, changeFilters } = useFilterContext();
+    const navigate = useNavigate();
+
+    const handleBtnShopNowClicked = (fragranceType: ProductTypes) => {
+        changeFilters({ ...filters, fragranceType })
+        navigate("products")
+    }
+
+
+
+    useEffect(() => {
+        adjustScrollbar();
+    })
 
     return (
         <section className="home-page_section">
@@ -21,17 +37,17 @@ export const HomePage: FC = () => {
             <div className="home-page_entry home-page_entry_premium">
                 <h3 className="entry-type_heading">PREMIUM FRAGRANCES</h3>
                 <h5 className="entry-info_heading">DISCOVER YOUR SCENT</h5>
-                <NavLink className="entry-link" to="/products">Shop now</NavLink>
+                <button className="entry-link" onClick={() => handleBtnShopNowClicked(ProductTypes.eauDeParfum)}>Shop now</button>
             </div>
             <div className="home-page_entry home-page_entry_oil">
                 <h3 className="entry-type_heading">OIL FRAGRANCES</h3>
                 <h5 className="entry-info_heading">DISCOVER YOUR SCENT</h5>
-                <NavLink className="entry-link" to="/products">Shop now</NavLink>
+                <button className="entry-link" onClick={() => handleBtnShopNowClicked(ProductTypes.oilFragrance)}>Shop now</button>
             </div>
             <div className="home-page_entry home-page_entry_gift">
                 <h3 className="entry-type_heading">GIFT SETS</h3>
                 <h5 className="entry-info_heading">DISCOVER YOUR SCENT</h5>
-                <NavLink className="entry-link" to="/products">Shop now</NavLink>
+                <button className="entry-link" onClick={() => handleBtnShopNowClicked(ProductTypes.giftBox)}>Shop now</button>
             </div>
             <div className="home-page_entry_delivery">
                 <div className="delivery-entry">
@@ -122,3 +138,4 @@ export const HomePage: FC = () => {
         </section>
     )
 }
+
