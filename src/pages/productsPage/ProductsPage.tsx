@@ -19,6 +19,8 @@ export const ProductsPage: FC = () => {
     const [existingProducts, setExistingProducts] = useState<{ existing: boolean, firstLoad: boolean }>
         ({ existing: true, firstLoad: true });
 
+
+
     // To control when the UnavailableProducts component has to be shown.
     // It indicates that there are no products matching the filters set by the user.
     // In the firstLoad the products are still not rendered and it shows that filter

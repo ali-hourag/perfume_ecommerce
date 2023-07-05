@@ -1,5 +1,5 @@
 
-export type UserType = {
+export type UserTypes = {
     email: string,
     name: string,
     password: string,
