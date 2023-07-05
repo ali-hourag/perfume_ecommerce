@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { CiShoppingBasket, CiShoppingCart } from 'react-icons/ci';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { VscAccount } from 'react-icons/vsc';
-import { AiOutlineSearch } from 'react-icons/ai';
 import './footer.css'
 
 export const Footer: FC = () => {
@@ -26,10 +25,6 @@ export const Footer: FC = () => {
             <div className="footer-icon-container">
                 <VscAccount className="footer-icon" />
                 <p>Account</p>
-            </div>
-            <div className="footer-icon-container">
-                <AiOutlineSearch className="footer-icon" />
-                <p>Search</p>
             </div>
         </footer>
     )
