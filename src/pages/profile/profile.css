@@ -1,0 +1,40 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+}
+
+.login-register-container {
+    width: 80vw;
+    height: 40vh;
+    background-color: rgb(255, 255, 255, .95);
+    border: 1px solid rgb(218, 165, 32, .9);
+}
+
+.login-message_text {
+    font-size: bold;
+    color: #4e0041;
+    text-decoration: underline;
+}
+
+.profile-back-btn {
+    background-color: rgb(218, 165, 32, .9);
+    color: #fafafa;
+    border-style: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

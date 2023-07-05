@@ -23,7 +23,6 @@ export const HomePage: FC = () => {
     }
 
 
-
     useEffect(() => {
         adjustScrollbar();
     })
@@ -138,4 +137,7 @@ export const HomePage: FC = () => {
         </section>
     )
 }
+
+
+
 

@@ -23,7 +23,7 @@
     width: 3rem;
     height: 3rem;
     background-color: rgb(218, 165, 32, .9);
-    color: white;
+    color: #fafafa;
     border-radius: 3rem;
     -webkit-border-radius: 3rem;
     -moz-border-radius: 3rem;
@@ -103,7 +103,7 @@
     align-items: center;
     justify-self: center;
     width: 75%;
-    border-top: 1px solid black;
+    border-top: 1px solid #212121;
 }
 
 

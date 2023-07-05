@@ -9,7 +9,6 @@ export const ProductSelected = () => {
     const params = useParams();
     const { products } = useProductsContext();
     const productID = params.productId;
-    if (!products || !productID) return;
     const product = (getProductById(products, productID));
 
 

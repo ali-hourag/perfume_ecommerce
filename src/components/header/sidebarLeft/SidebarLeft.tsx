@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { SideBarLeftProps } from '../../../types/propTypes/propTypes';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { PriceSort, ProductFor, ProductTypes } from '../../../types/dataTypes/product.d';
 import './sidebarLeft.css';
 import { useFilterContext } from '../../../hooks/useFilters';
@@ -12,12 +12,18 @@ export const SidebarLeft: FC<SideBarLeftProps> = ({ showSidebarLeft, changeSideb
     const showSidebar = showSidebarLeft.toString();
     const { changeFilters } = useFilterContext();
     const navigate = useNavigate();
+    const location = useLocation();
 
     //meter en el menú, account, home y log out si nadie está logged
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         changeFilters(setNewFilter())
         navigate("products");
+    }
+
+    const handleAccountClicked = () => {
+        changeSidebarLeftState();
+        localStorage.setItem("previous-page", location.pathname);
     }
 
     useEffect(() => {
@@ -74,7 +80,7 @@ export const SidebarLeft: FC<SideBarLeftProps> = ({ showSidebarLeft, changeSideb
                 <NavLink to="/" className="sidebar-form-link" onClick={changeSidebarLeftState}>HOME</NavLink>
             </div>
             <div className="sidebar-left-account">
-                <NavLink to="profile" className="sidebar-form-link" onClick={changeSidebarLeftState}>ACCOUNT</NavLink>
+                <NavLink to="profile" className="sidebar-form-link" onClick={handleAccountClicked}>ACCOUNT</NavLink>
             </div>
         </div>
     )

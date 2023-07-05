@@ -9,3 +9,7 @@
     font-family: bilargy-font;
     src: url(../assets/fonts/bilargy.otf);
 }
+
+.display-none {
+    display: none;
+}

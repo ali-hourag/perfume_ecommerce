@@ -6,6 +6,6 @@ import { ProductType } from "../types/dataTypes/product";
  * @return object with the corresponding id
  *  returns null if there is no matching product
  */
-export const getProductById = (products: ProductType[], id: string): ProductType | undefined => {
-    return products.find((product) => product.id === id);
+export const getProductById = (products: ProductType[] | null, id: string | undefined): ProductType | undefined => {
+    return products?.find((product) => product.id === id);
 }
