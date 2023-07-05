@@ -3,11 +3,20 @@ import { CiShoppingBasket, CiShoppingCart } from 'react-icons/ci';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { VscAccount } from 'react-icons/vsc';
 import './footer.css'
+import { useNavigate } from 'react-router-dom';
+import { useFilterContext } from '../../hooks/useFilters';
+import { PriceSort, ProductFor, ProductTypes } from '../../types/dataTypes/product.d';
 
 export const Footer: FC = () => {
+    const { changeFilters } = useFilterContext();
+    const navigate = useNavigate();
+    const handleShopBtnClicked = () => {
+        changeFilters({ fragranceType: ProductTypes.all, productFor: ProductFor.all, priceSort: PriceSort.none, topSeller: false });
+        navigate("products");
+    }
     return (
         <footer className="footer">
-            <div className="footer-icon-container">
+            <div className="footer-icon-container" onClick={handleShopBtnClicked}>
                 <CiShoppingBasket className="footer-icon" />
                 <p>Shop</p>
             </div>

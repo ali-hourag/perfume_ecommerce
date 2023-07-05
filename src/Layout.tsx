@@ -15,9 +15,10 @@ export const Layout: FC = () => {
                     <main className="main">
                         <Outlet />
                     </main>
+                    <Footer />
                 </FilterProvider>
             </ProductsProvider>
-            <Footer />
+
         </>
     )
 }
