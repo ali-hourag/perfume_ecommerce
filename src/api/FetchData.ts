@@ -17,3 +17,31 @@ export const addUser = (user: UserType) => {
         }
     })
 }
+
+export const updateProducts = (productSearched: ProductType, id: string, newQuantity: number) => {
+    fetch(`http://localhost:3000/products/${id}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+            ...productSearched,
+            quantity: newQuantity
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+}
+
+export const updateUser = (user: UserType) => {
+    console.log(user);
+    fetch(`http://localhost:3000/users/${user.id}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+            ...user,
+            cart: user.cart,
+            wishlist: user.wishlist
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+}

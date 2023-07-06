@@ -4,6 +4,9 @@ import { useUsersContext } from "../../../hooks/useUsers";
 import "./login.css";
 import { useForm } from "react-hook-form";
 import { Toaster, toast } from "react-hot-toast";
+import { useCartWishContext } from "../../../hooks/useCartWish";
+import { UserType } from "../../../types/dataTypes/user";
+import { updateUser } from "../../../api/FetchData";
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -13,8 +16,8 @@ export const Login = () => {
             password: ""
         }
     })
-
-    const { currentUser, users, login, logout } = useUsersContext();
+    const { changeCart, changeWishlist } = useCartWishContext();
+    const { currentUser, users, login, logout, changeUsers } = useUsersContext();
 
     const onSubmit = () => {
         let nonExisting = false;
@@ -29,6 +32,10 @@ export const Login = () => {
                     navigate("/", {
                         replace: true,
                     });
+                    const user: UserType = users[userSearchedIndex];
+                    changeCart(user.cart);
+                    changeWishlist(user.wishlist);
+
                 }, 2000)
             } else nonExisting = true;
         } else nonExisting = true;
@@ -40,17 +47,18 @@ export const Login = () => {
     }
 
     const handleLogOutClicked = () => {
-        //Guardar el wishlist y carrito en la API
-        //Por lo tanto, actualizar la lista de productos!!!
+        const userLS = localStorage.getItem("user") as string;
+        const user: UserType = JSON.parse(userLS);
+        const searchUser = users.findIndex(userSearched => userSearched.id === user.id)
+        const newUsers = users;
+        newUsers[searchUser].cart = user.cart;
+        newUsers[searchUser].wishlist = user.wishlist;
+        changeUsers(newUsers);
+        updateUser(user);
         logout();
         localStorage.setItem("user", JSON.stringify(users[0]));
     }
 
-    /**
-     * CREAR EL CONTEXTO DE USUARIO
-     * VER SI HAY UN USUARIO ENSEÑAR OTRA PÁGINA CON EL LOGOUT DISPONIBLE
-     * SI NO HAY, THEN MOSTRAR EL FORMULARIO
-     */
     return (
         <>
             <Toaster

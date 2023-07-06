@@ -7,7 +7,7 @@
       "type": "eau-de-parfume",
       "for": "him",
       "topSeller": true,
-      "quantity": 30,
+      "quantity": 18,
       "description": "Abid Ambre Eau De Parfum is a captivating perfume due to its floral base with a woody base and citrus notes that create the top-selling scent. It's one of the signature collections and among our most beloved and popular scents. When you first apply it, you'll be able to smell fresh and citrusy high notes of mandarin grapefruit and lemon. Then, you'll be able to feel the rich flowery middle notes that include roses and orchids as well as the lily. It is possible to smell the dry-down as a mix of sweet sandalwood, vanilla and musk. It lasts for a long time. It is described as a modern classic scent. It's easy to wear during the daytime and can be worn with professional attire that is smart. It can be worn alone in a formal and intimate evening setting.",
       "price": 69.91,
       "intensity": 3
@@ -19,7 +19,7 @@
       "type": "eau-de-parfume",
       "for": "him-her",
       "topSeller": true,
-      "quantity": 20,
+      "quantity": 10,
       "description": "Musk's rich floral scent opens with a deep rose and sparkling grapefruit before moving into the creamy vanilla and sweet honeysuckle that make it the top-selling perfume.",
       "price": 69.91,
       "intensity": 2
@@ -31,7 +31,7 @@
       "type": "eau-de-parfume",
       "for": "her",
       "topSeller": true,
-      "quantity": 25,
+      "quantity": 21,
       "description": "Amber Rose is perfumed with sensual scents of wood and musk. It is a trendy scent with an uplifting sweet, sparkling, and sweet aroma. The fruity and bright tones of bergamot intensify the smell before it settles into the delicious melon and juicy pineapple. The exquisitely elegant scent seduces thanks to its woody, smoky base and floral and citrus fragrance, which crowned it as our most popular scent. The scent opens with fruity and fresh bergamot notes and is then delightful pineapple and sweet melon.",
       "price": 79.91,
       "intensity": 3
@@ -316,7 +316,20 @@
       "name": "ALI HOURAG",
       "password": "1990Ali.",
       "cart": [],
-      "wishlist": []
+      "wishlist": [
+        {
+          "title": "ABID AMBRE",
+          "id": "product0",
+          "img": "perfume0.webp",
+          "price": 69.91
+        },
+        {
+          "title": "GOLDEN DUST",
+          "id": "product1",
+          "img": "perfume1.webp",
+          "price": 69.91
+        }
+      ]
     },
     {
       "id": "user2",

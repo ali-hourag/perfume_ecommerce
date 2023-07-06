@@ -2,14 +2,20 @@ import { useNavigate } from "react-router-dom";
 import { UnavailableProducts } from "../../components";
 import { useCartWishContext } from "../../hooks/useCartWish";
 import { useUsersContext } from "../../hooks/useUsers";
-import "./cart.css";
 import { roundDecimals } from "../../utils/roundDecimals";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { CartProduct } from "../../types/dataTypes/user";
+import { updateProducts } from "../../api/FetchData";
+import { useProductsContext } from "../../hooks/useProducts";
+import { ProductType } from "../../types/dataTypes/product";
+import "./cart.css";
 
 export const Cart = () => {
     const { cart } = useCartWishContext();
-    const { currentUser } = useUsersContext();
+    const { products, changeProducts } = useProductsContext();
+    const { currentUser, login } = useUsersContext();
+    const { changeCart } = useCartWishContext();
     const [checkout, setCheckout] = useState(false);
     const navigate = useNavigate();
     let totalPrice = 0;
@@ -25,7 +31,7 @@ export const Cart = () => {
         const checkoutInput: HTMLInputElement = document.querySelector(".checkout-email-input") as HTMLInputElement;
         const checkoutInputAddress: HTMLInputElement = document.querySelector(".checkout-email-input") as HTMLInputElement;
         let readyToCheckout = false;
-        if (!checkoutInput) {
+        if (currentUser.email !== "guest@guest.com") {
             if (checkoutInputAddress.value.length > 5) {
                 readyToCheckout = true;
             }
@@ -38,9 +44,31 @@ export const Cart = () => {
         if (readyToCheckout) {
             setCheckout(true)
             toast.success("Successful purchase")
+            const newUser = currentUser;
+            newUser.cart = [];
+            login(newUser);
+            const userLS = localStorage.getItem("user") as string;
+            const user = JSON.parse(userLS);
+            const activeCart: CartProduct[] = user.cart as CartProduct[];
+            console.log(products);
+            for (let i = 0; i < activeCart.length; i++) {
+                const productSearched = products?.find((product) => product.id === activeCart[i].id) as ProductType;
+                if (productSearched && products) {
+                    const purchasedQuantity = activeCart[i].quantity as number;
+                    const totalQuantity = productSearched?.quantity - purchasedQuantity;
+                    productSearched.quantity = productSearched?.quantity - purchasedQuantity;
+                    updateProducts(productSearched, activeCart[i].id, totalQuantity)
+                }
+            }
+
+            if (products) {
+                changeProducts(products);
+            }
+            localStorage.setItem("user", JSON.stringify(newUser));
         } else toast.error("Invalid data")
     }
     const handleBtnContinue = () => {
+        changeCart([])
         navigate("/", {
             replace: true
         })
@@ -54,7 +82,7 @@ export const Cart = () => {
             />
             {/* Since the structure of the map is very similar
             from the wishlist page, some classes will be the same. */}
-            {cart.length === 0 && <UnavailableProducts />}
+            {cart.length === 0 && !checkout && <UnavailableProducts />}
             {cart.length > 0 && !checkout && cart.map((product) => (
                 <div className="wishlist-entry-container" key={product.id}>
                     <img src={`/src/assets/img/${product.img}`} className="wishlist-img" onClick={() => handleProductClicked(product.id)} />

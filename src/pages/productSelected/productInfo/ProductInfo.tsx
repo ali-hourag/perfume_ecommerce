@@ -66,6 +66,7 @@ export const ProductInfo: FC<ProductInfoProps> = ({ product }) => {
             localStorage.setItem("user", JSON.stringify(activeUser));
             changeCart(activeUser.cart);
             toast.success("Cart updated successfully!");
+            setCounter(0);
         }
     }
 
