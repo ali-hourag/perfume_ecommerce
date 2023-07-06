@@ -31,7 +31,7 @@
       "type": "eau-de-parfume",
       "for": "her",
       "topSeller": true,
-      "quantity": 21,
+      "quantity": 18,
       "description": "Amber Rose is perfumed with sensual scents of wood and musk. It is a trendy scent with an uplifting sweet, sparkling, and sweet aroma. The fruity and bright tones of bergamot intensify the smell before it settles into the delicious melon and juicy pineapple. The exquisitely elegant scent seduces thanks to its woody, smoky base and floral and citrus fragrance, which crowned it as our most popular scent. The scent opens with fruity and fresh bergamot notes and is then delightful pineapple and sweet melon.",
       "price": 79.91,
       "intensity": 3
@@ -211,7 +211,7 @@
       "type": "gift-box",
       "for": "him-her",
       "topSeller": false,
-      "quantity": 15,
+      "quantity": 13,
       "description": "The original series is inspired by intense ingredients from around the world. Each scent is a blend of unexpected fragrance accords that boast a wealth of opulent aromas. Fragrances are designed to wear solo or paired together. This Large gift set contains Golden Dust 50ml EDP x1, Night Illusion 50ml EDP x1, Soft Paradise 50ml EDP x1.",
       "price": 199.99,
       "intensity": 3
@@ -303,6 +303,14 @@
   ],
   "users": [
     {
+      "id": "admin",
+      "email": "admin.admin@admin.com",
+      "name": "admin",
+      "password": "Admin1234.",
+      "cart": [],
+      "wishlist": []
+    },
+    {
       "id": "user0",
       "email": "guest@guest.com",
       "name": "guest",
@@ -322,22 +330,37 @@
           "id": "product0",
           "img": "perfume0.webp",
           "price": 69.91
-        },
-        {
-          "title": "GOLDEN DUST",
-          "id": "product1",
-          "img": "perfume1.webp",
-          "price": 69.91
         }
       ]
     },
     {
       "id": "user2",
-      "email": "ali.hourag@gmail.ces",
-      "name": "ALI HOURAG",
-      "password": "2002Ali.-",
+      "email": "javi.luis@gmail.com",
+      "name": "javi",
+      "password": "Javi.Luis2002",
       "cart": [],
-      "wishlist": []
+      "wishlist": [
+        {
+          "title": "GOLDEN DUST",
+          "id": "product1",
+          "img": "perfume1.webp",
+          "price": 69.91
+        },
+        {
+          "title": "ORIGINAL SERIES GIFT SET",
+          "id": "gift0",
+          "img": "gift0.webp",
+          "price": 199.99,
+          "quantity": 2
+        },
+        {
+          "title": "AMBER ROSE",
+          "id": "product2",
+          "img": "perfume2.webp",
+          "price": 79.91,
+          "quantity": 0
+        }
+      ]
     }
   ]
 }
