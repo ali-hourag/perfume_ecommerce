@@ -14,7 +14,7 @@ export const SidebarLeft: FC<SideBarLeftProps> = ({ showSidebarLeft, changeSideb
     const navigate = useNavigate();
     const location = useLocation();
 
-    //meter en el menú, account, home y log out si nadie está logged
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         changeFilters(setNewFilter())

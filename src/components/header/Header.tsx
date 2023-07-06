@@ -34,14 +34,13 @@ export const Header: FC = () => {
                 const userLS = localStorage.getItem("user");
                 if (userLS !== null) {
                     const userLogged = JSON.parse(userLS);
-                    // Actualizar el usuario en el array también!!
-                    // Actualizar el usuario en el array también!!
+
                     login(userLogged);
                 }
             }
             const activeUserLS = localStorage.getItem("user") as string;
             const activeUser = JSON.parse(activeUserLS);
-            //lógica pa poner cart y wishlist
+
             changeCart(activeUser.cart);
             changeWishlist(activeUser.wishlist);
 

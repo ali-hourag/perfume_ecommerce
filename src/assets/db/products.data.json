@@ -7,7 +7,7 @@
       "type": "eau-de-parfume",
       "for": "him",
       "topSeller": true,
-      "quantity": 18,
+      "quantity": 14,
       "description": "Abid Ambre Eau De Parfum is a captivating perfume due to its floral base with a woody base and citrus notes that create the top-selling scent. It's one of the signature collections and among our most beloved and popular scents. When you first apply it, you'll be able to smell fresh and citrusy high notes of mandarin grapefruit and lemon. Then, you'll be able to feel the rich flowery middle notes that include roses and orchids as well as the lily. It is possible to smell the dry-down as a mix of sweet sandalwood, vanilla and musk. It lasts for a long time. It is described as a modern classic scent. It's easy to wear during the daytime and can be worn with professional attire that is smart. It can be worn alone in a formal and intimate evening setting.",
       "price": 69.91,
       "intensity": 3
@@ -19,7 +19,7 @@
       "type": "eau-de-parfume",
       "for": "him-her",
       "topSeller": true,
-      "quantity": 10,
+      "quantity": 8,
       "description": "Musk's rich floral scent opens with a deep rose and sparkling grapefruit before moving into the creamy vanilla and sweet honeysuckle that make it the top-selling perfume.",
       "price": 69.91,
       "intensity": 2
@@ -127,7 +127,7 @@
       "type": "oil-fragrance",
       "for": "him",
       "topSeller": true,
-      "quantity": 40,
+      "quantity": 39,
       "description": "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
       "price": 24.99,
       "intensity": 3
@@ -235,7 +235,7 @@
       "type": "gift-box",
       "for": "her",
       "topSeller": true,
-      "quantity": 20,
+      "quantity": 18,
       "description": "We have created a special bundle which includes Eau De Perfume, Candle, and Fragrance Oil in our best-selling scent. This Gift set contains Night Illusion 50ml EDP x1, Night Illusion 10 ml Oil x1, Night IllusionCandle x1.",
       "price": 114.99,
       "intensity": 3
@@ -303,14 +303,6 @@
   ],
   "users": [
     {
-      "id": "admin",
-      "email": "admin.admin@admin.com",
-      "name": "admin",
-      "password": "Admin1234.",
-      "cart": [],
-      "wishlist": []
-    },
-    {
       "id": "user0",
       "email": "guest@guest.com",
       "name": "guest",
@@ -361,6 +353,14 @@
           "quantity": 0
         }
       ]
+    },
+    {
+      "id": "user3",
+      "email": "alihourag2002@gmail.com",
+      "name": "ALI",
+      "password": "2002Ali.-",
+      "cart": [],
+      "wishlist": []
     }
   ]
 }
