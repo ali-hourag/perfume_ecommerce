@@ -25,7 +25,9 @@ export const ProductsPage: FC = () => {
     // It indicates that there are no products matching the filters set by the user.
     // In the firstLoad the products are still not rendered and it shows that filter
     // are not matching when in reality the productsDiv are still not rendered at that
-    // time
+    // time. This solves the problem that happens if the modal of no results is showing 
+    // and after rechargin it is appended with next products
+    // and loses all of its changes on the state
     useEffect(() => {
         const productsDiv: NodeListOf<HTMLDivElement> = document.querySelectorAll(".product-card");
         if (productsDiv.length !== 0) setExistingProducts({ existing: true, firstLoad: false });
@@ -39,7 +41,7 @@ export const ProductsPage: FC = () => {
 
     return (
         <section className="products-container">
-            {!existingProducts.existing && <UnavailableProducts />}
+            {!existingProducts.existing && !existingProducts.firstLoad && <UnavailableProducts />}
             {products && products.filter(({ type }) => {
                 if (fragranceType === ProductTypes.all) return true;
                 return type === fragranceType;

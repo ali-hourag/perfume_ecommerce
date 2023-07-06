@@ -9,7 +9,6 @@ export async function getData(dataType: string): Promise<ProductType[] | UserTyp
 }
 
 export const addUser = (user: UserType) => {
-    console.log(user);
     fetch("http://localhost:3000/users", {
         method: "POST",
         body: JSON.stringify(user),

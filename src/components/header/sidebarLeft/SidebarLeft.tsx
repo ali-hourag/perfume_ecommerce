@@ -10,7 +10,7 @@ import { setNewFilter } from '../../../utils/setNewFilter';
 
 export const SidebarLeft: FC<SideBarLeftProps> = ({ showSidebarLeft, changeSidebarLeftState }) => {
     const showSidebar = showSidebarLeft.toString();
-    const { changeFilters } = useFilterContext();
+    const { filters, changeFilters } = useFilterContext();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -28,8 +28,10 @@ export const SidebarLeft: FC<SideBarLeftProps> = ({ showSidebarLeft, changeSideb
 
     useEffect(() => {
         const checkedInputs: NodeListOf<HTMLInputElement> = document.querySelectorAll(".sidebar-form_input-checked");
+        const topSellerInput: HTMLInputElement = document.querySelector(".sidebar-form-top-seller_input") as HTMLInputElement;
+        topSellerInput.checked = false;
         checkedInputs.forEach(checkedInput => { checkedInput.checked = true })
-    }, [])
+    }, [filters])
 
     return (
         <div className={`sidebar-left show-sidebar-left_${showSidebar}`}  >

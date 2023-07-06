@@ -15,7 +15,7 @@ export const Login = () => {
     })
 
     const { currentUser, users, login, logout } = useUsersContext();
-    console.log(users);
+
     const onSubmit = () => {
         let nonExisting = false;
         const userSearchedIndex = users.findIndex((user) => user.email === watch("email"))
@@ -51,11 +51,11 @@ export const Login = () => {
      */
     return (
         <>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             <form className={`form-container ${currentUser.email === "guest@guest.com" ? "" : "login-logout-display-none"}`} onSubmit={handleSubmit(onSubmit)}>
-                <Toaster
-                    position="top-center"
-                    reverseOrder={false}
-                />
                 <div className="form-entry-container">
                     <label className="form-entry-label">Email</label>
                     <input type="email" id="email-input"

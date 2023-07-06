@@ -39,7 +39,9 @@ export const Register = () => {
                 registerUser(newUser);
                 setTimeout(() => {
                     reset();
-                    navigate("/profile");
+                    navigate("/profile", {
+                        replace: true,
+                    });
                 }, 2000)
             } else setExistingPassword(true);
         } else setExistingEmail(true)

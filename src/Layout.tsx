@@ -5,6 +5,7 @@ import { FC } from "react";
 import { ProductsProvider } from "./context/ProductsProvider";
 import { FilterProvider } from "./context/FilterProvider";
 import { UserContextProvider } from "./context/UserContextProvider";
+import { CartWishProvider } from "./context/CartWishProvider";
 
 
 export const Layout: FC = () => {
@@ -12,13 +13,15 @@ export const Layout: FC = () => {
         <>
             <UserContextProvider>
                 <ProductsProvider>
-                    <FilterProvider>
-                        <Header />
-                        <main className="main">
-                            <Outlet />
-                        </main>
-                        <Footer />
-                    </FilterProvider>
+                    <CartWishProvider>
+                        <FilterProvider>
+                            <Header />
+                            <main className="main">
+                                <Outlet />
+                            </main>
+                            <Footer />
+                        </FilterProvider>
+                    </CartWishProvider>
                 </ProductsProvider>
             </UserContextProvider>
         </>

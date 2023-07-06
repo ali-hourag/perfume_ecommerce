@@ -8,16 +8,19 @@ import { BiLogoInstagram, BiLogoTwitter, BiLogoYoutube, BiLogoTiktok } from "rea
 import { Toaster } from "react-hot-toast";
 import { handleHelpButton, handleInfoClicked, handleSubscribeButton } from "../../utils/handleBtnFooterInfo";
 import { useFilterContext } from "../../hooks/useFilters";
-import { ProductTypes } from "../../types/dataTypes/product.d";
+import { PriceSort, ProductFor, ProductTypes } from "../../types/dataTypes/product.d";
 import { adjustScrollbar } from "../../utils/adjustScrollbar";
 import "./homePage.css";
 
 
 export const HomePage: FC = () => {
-    const { filters, changeFilters } = useFilterContext();
+    const { changeFilters } = useFilterContext();
     const navigate = useNavigate();
     const handleBtnShopNowClicked = (fragranceType: ProductTypes) => {
-        changeFilters({ ...filters, fragranceType })
+        const productFor: ProductFor = ProductFor.all;
+        const priceSort: PriceSort = PriceSort.none;
+        const topSeller = false;
+        changeFilters({ fragranceType, productFor, priceSort, topSeller });
         navigate("products")
     }
 
