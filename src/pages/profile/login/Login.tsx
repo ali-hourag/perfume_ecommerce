@@ -40,6 +40,8 @@ export const Login = () => {
     }
 
     const handleLogOutClicked = () => {
+        //Guardar el wishlist y carrito en la API
+        //Por lo tanto, actualizar la lista de productos!!!
         logout();
         localStorage.setItem("user", JSON.stringify(users[0]));
     }

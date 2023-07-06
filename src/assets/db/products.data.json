@@ -317,6 +317,14 @@
       "password": "1990Ali.",
       "cart": [],
       "wishlist": []
+    },
+    {
+      "id": "user2",
+      "email": "ali.hourag@gmail.ces",
+      "name": "ALI HOURAG",
+      "password": "2002Ali.-",
+      "cart": [],
+      "wishlist": []
     }
   ]
 }

@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserType } from '../../types/dataTypes/user';
 import './header.css'
 import { useUsersContext } from '../../hooks/useUsers';
+import { useCartWishContext } from '../../hooks/useCartWish';
 
 export const Header: FC = () => {
     const [sidebarLeft, sidebarRight] = useSidebar();
@@ -17,6 +18,7 @@ export const Header: FC = () => {
     const { sidebarRightState, showSidebarRight, hideSidebarRight } = sidebarRight;
     const { products, changeProducts } = useProductsContext();
     const { changeUsers, login } = useUsersContext();
+    const { cart, changeCart, changeWishlist } = useCartWishContext();
     const navigate = useNavigate();
 
     if (products === null) {
@@ -37,6 +39,11 @@ export const Header: FC = () => {
                     login(userLogged);
                 }
             }
+            const activeUserLS = localStorage.getItem("user") as string;
+            const activeUser = JSON.parse(activeUserLS);
+            //lógica pa poner cart y wishlist
+            changeCart(activeUser.cart);
+            changeWishlist(activeUser.wishlist);
 
         })();
     }
@@ -45,14 +52,18 @@ export const Header: FC = () => {
         navigate("/");
     }
 
+    const handleCartClicked = () => {
+        navigate("cart");
+    }
+
     return (
         <header className="header">
             <AiOutlineMenu className="header_icon-menu" onClick={showSidebarLeft} />
             <img src="/src/assets/img/sunnah-musk.avif" onClick={handleLogoClicked} />
             <AiOutlineSearch className="header_icon-search" onClick={showSidebarRight} />
-            <div className="cart-icon-container">
+            <div className="cart-icon-container" onClick={handleCartClicked}>
                 <AiOutlineShoppingCart className="header_icon-cart" />
-                <span className="icon-number_span header-icon-number_span">0</span>
+                <span className="icon-number_span header-icon-number_span">{cart.length}</span>
             </div>
             <SidebarLeft
                 showSidebarLeft={sidebarLeftState}

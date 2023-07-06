@@ -18,32 +18,29 @@ export const Register = () => {
     })
     const { users, registerUser } = useUsersContext();
     const [existingEmail, setExistingEmail] = useState(false);
-    const [existingPassword, setExistingPassword] = useState(false);
 
     const onSubmit = () => {
         const userSearchedIndexEmail = users.findIndex((user) => user.email === watch("email"));
         if (userSearchedIndexEmail === -1) {
             setExistingEmail(false);
-            const userSearchedIndexPassword = users.findIndex((user) => user.password === watch("password"));
-            if (userSearchedIndexPassword === -1) {
-                setExistingPassword(false);
-                const newUser: UserType = {
-                    id: `user${users.length}`,
-                    email: watch("email"),
-                    name: watch("name"),
-                    password: watch("password"),
-                    cart: [],
-                    wishlist: []
-                }
-                toast.success("User registered successfully!")
-                registerUser(newUser);
-                setTimeout(() => {
-                    reset();
-                    navigate("/profile", {
-                        replace: true,
-                    });
-                }, 2000)
-            } else setExistingPassword(true);
+
+            const newUser: UserType = {
+                id: `user${users.length}`,
+                email: watch("email"),
+                name: watch("name"),
+                password: watch("password"),
+                cart: [],
+                wishlist: []
+            }
+            toast.success("User registered successfully!")
+            registerUser(newUser);
+            setTimeout(() => {
+                reset();
+                navigate("/profile", {
+                    replace: true,
+                });
+            }, 2000)
+
         } else setExistingEmail(true)
 
     }
@@ -109,7 +106,6 @@ export const Register = () => {
                             }
                         })}
                     />
-                    {existingPassword && <p className="error-p">password already used</p>}
                     {errors.password && <p className="error-p">{errors.password.message}</p>}
                 </div>
                 <div className="form-entry-container">
