@@ -1,19 +1,21 @@
+import { addUser } from "../api/FetchData";
 import { initialValueType } from "../types/contextTypes/userContextTypes";
-import { UserTypes } from "../types/dataTypes/user";
+import { UserType } from "../types/dataTypes/user";
 
-export const initialUser: UserTypes = {
+export const initialUser: UserType = {
+    id: "user0",
     email: "guest@guest.com",
     name: "guest",
-    password: "1234",
+    password: "Guest1234.",
     cart: [],
     wishlist: []
 }
 
 type UserActionType =
-    | { type: "CHANGE_USERS", payload: UserTypes[] }
-    | { type: "LOGIN", payload: UserTypes }
-    | { type: "LOGOUT" }
-    | { type: "REGISTER", payload: UserTypes }
+    | { type: "CHANGE_USERS", payload: UserType[] }
+    | { type: "LOGIN", payload: UserType }
+    | { type: "LOGOUT", payload: UserType }
+    | { type: "REGISTER", payload: UserType }
 
 export const userReducer = (state: initialValueType, action: UserActionType) => {
     switch (action.type) {
@@ -30,16 +32,15 @@ export const userReducer = (state: initialValueType, action: UserActionType) => 
         case "LOGOUT":
             return {
                 ...state,
-                currentUser: initialUser
+                currentUser: action.payload
             }
         case "REGISTER": {
-            addUser(action.payload)
-            return state
+            addUser(action.payload);
+            return {
+                ...state,
+                users: [...state.users, action.payload]
+            }
         }
         default: return state;
     }
-}
-
-const addUser = (user: UserTypes) => {
-    //Hacer un PATCH para añadir el usuario a la API
 }

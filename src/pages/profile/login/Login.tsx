@@ -1,18 +1,47 @@
+
+import { useNavigate } from "react-router-dom";
+import { useUsersContext } from "../../../hooks/useUsers";
 import "./login.css";
 import { useForm } from "react-hook-form";
+import { Toaster, toast } from "react-hot-toast";
 
 export const Login = () => {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    const navigate = useNavigate();
+    const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
         defaultValues: {
             email: "",
             password: ""
         }
     })
 
+    const { currentUser, users, login, logout } = useUsersContext();
+    console.log(users);
     const onSubmit = () => {
-        console.log("entro");
+        let nonExisting = false;
+        const userSearchedIndex = users.findIndex((user) => user.email === watch("email"))
+        if (userSearchedIndex !== -1 && watch("email") !== "guest@guest.com") {
+            if (users[userSearchedIndex].password === watch("password")) {
+                login(users[userSearchedIndex]);
+                localStorage.setItem("user", JSON.stringify(users[userSearchedIndex]));
+                toast.success("Successfully logged!");
+                setTimeout(() => {
+                    reset();
+                    navigate("/", {
+                        replace: true,
+                    });
+                }, 2000)
+            } else nonExisting = true;
+        } else nonExisting = true;
 
-        reset();
+        if (nonExisting) {
+            reset();
+            toast.error("This user does not exist.");
+        }
+    }
+
+    const handleLogOutClicked = () => {
+        logout();
+        localStorage.setItem("user", JSON.stringify(users[0]));
     }
 
     /**
@@ -22,7 +51,11 @@ export const Login = () => {
      */
     return (
         <>
-            <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
+            <form className={`form-container ${currentUser.email === "guest@guest.com" ? "" : "login-logout-display-none"}`} onSubmit={handleSubmit(onSubmit)}>
+                <Toaster
+                    position="top-center"
+                    reverseOrder={false}
+                />
                 <div className="form-entry-container">
                     <label className="form-entry-label">Email</label>
                     <input type="email" id="email-input"
@@ -61,11 +94,11 @@ export const Login = () => {
                 </div>
                 <button type="submit" className="login-btn">LOG IN</button>
             </form>
-            <div className="logout-container login-logout-display-none">
-                <h2>Hi User!</h2>
-                <p>Name: user</p>
-                <p>Email: user@gmail.com</p>
-                <button className="login-btn">Log out</button>
+            <div className={`logout-container ${currentUser.email === "guest@guest.com" ? "login-logout-display-none" : ""}`}>
+                <h2>Hi {currentUser.name}!</h2>
+                <p>Name: {currentUser.name}</p>
+                <p>Email: {currentUser.email}</p>
+                <button className="login-btn" onClick={handleLogOutClicked}>Log out</button>
             </div>
         </>
     )

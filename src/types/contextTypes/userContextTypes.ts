@@ -1,14 +1,14 @@
-import { UserTypes } from "../dataTypes/user";
+import { UserType } from "../dataTypes/user";
 
 export interface UserContextTypes {
-    users: UserTypes[],
-    currentUser: UserTypes,
-    changeUsers: (users: UserTypes[]) => void,
-    login: (user: UserTypes) => void,
+    users: UserType[],
+    currentUser: UserType,
+    changeUsers: (users: UserType[]) => void,
+    login: (user: UserType) => void,
     logout: () => void,
-    register: (user: UserTypes) => void
+    registerUser: (user: UserType) => void
 }
 export type initialValueType = {
-    users: UserTypes[],
-    currentUser: UserTypes
+    users: UserType[],
+    currentUser: UserType
 }

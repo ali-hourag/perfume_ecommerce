@@ -5,21 +5,39 @@ import { SidebarRight } from '.';
 import { useSidebar } from '../../hooks/useSidebar';
 import { useProductsContext } from '../../hooks/useProducts';
 import { ProductType } from '../../types/dataTypes/product.d';
-import { getData } from '../../api/FetchProducts';
+import { getData } from '../../api/FetchData';
 import { useNavigate } from 'react-router-dom';
+import { UserType } from '../../types/dataTypes/user';
 import './header.css'
+import { useUsersContext } from '../../hooks/useUsers';
 
 export const Header: FC = () => {
     const [sidebarLeft, sidebarRight] = useSidebar();
     const { sidebarLeftState, showSidebarLeft, hideSidebarLeft } = sidebarLeft;
     const { sidebarRightState, showSidebarRight, hideSidebarRight } = sidebarRight;
     const { products, changeProducts } = useProductsContext();
+    const { changeUsers, login } = useUsersContext();
     const navigate = useNavigate();
 
     if (products === null) {
         (async function getProducts() {
             const fetchProducts: ProductType[] = await getData("products") as ProductType[];
+            const fetchUsers: UserType[] = await getData("users") as UserType[];
             changeProducts(fetchProducts);
+            changeUsers(fetchUsers);
+            if (localStorage.getItem("user") === null) {
+                localStorage.setItem("user", JSON.stringify(fetchUsers[0]));
+                login(fetchUsers[0]);
+            } else {
+                const userLS = localStorage.getItem("user");
+                if (userLS !== null) {
+                    const userLogged = JSON.parse(userLS);
+                    // Actualizar el usuario en el array también!!
+                    // Actualizar el usuario en el array también!!
+                    login(userLogged);
+                }
+            }
+
         })();
     }
 

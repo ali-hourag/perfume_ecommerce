@@ -1,11 +1,13 @@
 
 
+import { useUsersContext } from "../../hooks/useUsers";
 import "./profile.css";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 export const Profile = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const { currentUser } = useUsersContext();
 
 
     const handleBackBtn = () => {
@@ -28,7 +30,7 @@ export const Profile = () => {
             <section className="login-register-container">
                 <Outlet />
             </section>
-            <p className="login-message_text" onClick={handleLoginMessageClicked}>{!location.pathname.includes("register") ?
+            <p className={`login-message_text ${currentUser.email === "guest@guest.com" ? "" : "login-message-display_none"}`} onClick={handleLoginMessageClicked}>{!location.pathname.includes("register") ?
                 "you don't have an accout? register here" : "you already have an account? log in here"}</p>
             <button className="profile-back-btn" onClick={handleBackBtn}>Go back</button>
         </section>

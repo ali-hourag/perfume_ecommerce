@@ -1,7 +1,13 @@
 import { useForm } from "react-hook-form";
 import "./register.css";
+import { useUsersContext } from "../../../hooks/useUsers";
+import { UserType } from "../../../types/dataTypes/user";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 
 export const Register = () => {
+    const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm({
         defaultValues: {
             name: "",
@@ -10,15 +16,44 @@ export const Register = () => {
             passwordConfirmation: ""
         }
     })
+    const { users, registerUser } = useUsersContext();
+    const [existingEmail, setExistingEmail] = useState(false);
+    const [existingPassword, setExistingPassword] = useState(false);
 
     const onSubmit = () => {
-        console.log("entro");
-        reset();
+        const userSearchedIndexEmail = users.findIndex((user) => user.email === watch("email"));
+        if (userSearchedIndexEmail === -1) {
+            setExistingEmail(false);
+            const userSearchedIndexPassword = users.findIndex((user) => user.password === watch("password"));
+            if (userSearchedIndexPassword === -1) {
+                setExistingPassword(false);
+                const newUser: UserType = {
+                    id: `user${users.length}`,
+                    email: watch("email"),
+                    name: watch("name"),
+                    password: watch("password"),
+                    cart: [],
+                    wishlist: []
+                }
+                toast.success("User registered successfully!")
+                registerUser(newUser);
+                setTimeout(() => {
+                    reset();
+                    navigate("/profile");
+                }, 2000)
+            } else setExistingPassword(true);
+        } else setExistingEmail(true)
+
     }
 
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)} className="form-container form-container-register">
+                <Toaster
+                    z-index="20"
+                    position="top-center"
+                    reverseOrder={true}
+                />
                 <div className="form-entry-container">
                     <label className="form-entry-label">Name</label>
                     <input type="text" id="name-input"
@@ -53,6 +88,7 @@ export const Register = () => {
                             }
                         })}
                     />
+                    {existingEmail && <p className="error-p">email already registered</p>}
                     {errors.email && <p className="error-p">{errors.email.message}</p>}
                 </div>
                 <div className="form-entry-container">
@@ -71,6 +107,7 @@ export const Register = () => {
                             }
                         })}
                     />
+                    {existingPassword && <p className="error-p">password already used</p>}
                     {errors.password && <p className="error-p">{errors.password.message}</p>}
                 </div>
                 <div className="form-entry-container">

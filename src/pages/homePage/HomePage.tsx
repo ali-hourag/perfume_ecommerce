@@ -16,7 +16,6 @@ import "./homePage.css";
 export const HomePage: FC = () => {
     const { filters, changeFilters } = useFilterContext();
     const navigate = useNavigate();
-
     const handleBtnShopNowClicked = (fragranceType: ProductTypes) => {
         changeFilters({ ...filters, fragranceType })
         navigate("products")

@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react"
-import { UserTypes } from "../types/dataTypes/user"
+import { UserType } from "../types/dataTypes/user"
 import { UserContextTypes, initialValueType } from "../types/contextTypes/userContextTypes"
 import { initialUser, userReducer } from "./actions"
 
@@ -9,45 +9,46 @@ const initialValue: initialValueType = {
     users: [],
     currentUser: initialUser,
 }
-const userContext = createContext<UserContextTypes>({
+export const userContext = createContext<UserContextTypes>({
     users: [],
     currentUser: initialUser,
     changeUsers: () => { },
     login: () => { },
     logout: () => { },
-    register: () => { }
+    registerUser: () => { }
 })
 
 
 export const UserContextProvider = ({ ...props }) => {
-    const [userInfo, dispatch] = useReducer(userReducer, initialValue)
+    const [userInfo, dispatch] = useReducer(userReducer, initialValue);
     const users = userInfo.users;
     const currentUser = userInfo.currentUser;
-    const changeUsers = (users: UserTypes[]) => {
+    const changeUsers = (users: UserType[]) => {
         dispatch({
             type: "CHANGE_USERS",
             payload: users
         });
     }
-    const login = (user: UserTypes) => {
+    const login = (user: UserType) => {
         dispatch({
             type: "LOGIN",
             payload: user
         })
     }
-    const logout = () => {
+    const logout = (user: UserType = users[0]) => {
         dispatch({
-            type: "LOGOUT"
-        })
-    }
-    const register = (user: UserTypes) => {
-        dispatch({
-            type: "REGISTER",
+            type: "LOGOUT",
             payload: user
         })
     }
+    const registerUser = (newUser: UserType) => {
+        dispatch({
+            type: "REGISTER",
+            payload: newUser
+        })
+    }
     return (
-        <userContext.Provider value={{ users, currentUser, changeUsers, login, logout, register }} >
+        <userContext.Provider value={{ users, currentUser, changeUsers, login, logout, registerUser }} >
             {props.children}
         </userContext.Provider>
     )
