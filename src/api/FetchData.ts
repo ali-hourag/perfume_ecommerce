@@ -32,7 +32,6 @@ export const updateProducts = (productSearched: ProductType, id: string, newQuan
 }
 
 export const updateUser = (user: UserType) => {
-    console.log(user);
     fetch(`http://localhost:3000/users/${user.id}`, {
         method: "PATCH",
         body: JSON.stringify({

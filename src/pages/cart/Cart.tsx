@@ -50,7 +50,6 @@ export const Cart = () => {
             const userLS = localStorage.getItem("user") as string;
             const user = JSON.parse(userLS);
             const activeCart: CartProduct[] = user.cart as CartProduct[];
-            console.log(products);
             for (let i = 0; i < activeCart.length; i++) {
                 const productSearched = products?.find((product) => product.id === activeCart[i].id) as ProductType;
                 if (productSearched && products) {
