@@ -19,8 +19,12 @@ This is my first React project with TypeScript done by me, Ali Hourag.
 * React-hot-toast has been implemented for dinamic notifications.
 * React-icons library has been used for icon importation.
 * React-router-dom has been very helpful for routing.
+* Product filtration by 4 parameters!
+* Search products dinamically.
+* Possibility of being a guest and logging in as a normal user.
 * Mobile first design!
 
+<a href="https://drive.google.com/file/d/1d9SejhiKvgIX4ccd8Bjkn_RCrC2yIQfj/view?usp=sharing">Click here to see a demonstration of how to use!</a>
 
 ## Technologies
 - HTML
