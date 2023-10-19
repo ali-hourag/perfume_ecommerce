@@ -35,10 +35,13 @@ This is my first React project with TypeScript done by me, Ali Hourag.
 
 
 ## Setup
+You can open the deployed App on Vercel by clicking <a href="">here</a>!
+<br />
 If you want run it directly from code you will need to open 2 terminals and run the following commands on each one:
 - npm run server to run the simple json data on http://localhost:3000
 - npm run dev to run the project and open it through the localhost
 <br/>
-Afterwards, right click on the explorer and select mobile device, since it is optimized for mobile devices!
+
+**Afterwards, right click on the explorer and select mobile device, since it is optimized for mobile devices!**
 
 ## Get PERFUME ECOMMERCE app and enjoy! 📱
