@@ -20,7 +20,7 @@ This is my first React project with TypeScript done by me, Ali Hourag.
 * React-icons library has been used for icon importation.
 * React-router-dom has been very helpful for routing.
 * Product filtration by 4 parameters!
-* Search products dinamically.
+* Search products dynamically.
 * Possibility of being a guest and logging in as a normal user.
 * Mobile first design!
 
