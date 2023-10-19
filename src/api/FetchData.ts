@@ -1,15 +1,15 @@
 import { ProductType } from "../types/dataTypes/product";
 import { UserType } from "../types/dataTypes/user";
-const URL = process.env.API_URL;
+
 export async function getData(dataType: string): Promise<ProductType[] | UserType[] | null> {
-    const response: Response = await fetch(`${URL}/${dataType}`);
+    const response: Response = await fetch(`https://perfume-ecommerce-json.vercel.app/${dataType}`);
     if (response.status === 404) return null;
     const fetchedData: ProductType[] = await response.json();
     return fetchedData;
 }
 
 export const addUser = (user: UserType) => {
-    fetch("${URL}/users", {
+    fetch("https://perfume-ecommerce-json.vercel.app/users", {
         method: "POST",
         body: JSON.stringify(user),
         headers: {
@@ -19,7 +19,7 @@ export const addUser = (user: UserType) => {
 }
 
 export const updateProducts = (productSearched: ProductType, id: string, newQuantity: number) => {
-    fetch(`${URL}/products/${id}`, {
+    fetch(`https://perfume-ecommerce-json.vercel.app/products/${id}`, {
         method: "PATCH",
         body: JSON.stringify({
             ...productSearched,
@@ -32,7 +32,7 @@ export const updateProducts = (productSearched: ProductType, id: string, newQuan
 }
 
 export const updateUser = (user: UserType) => {
-    fetch(`${URL}/users/${user.id}`, {
+    fetch(`https://perfume-ecommerce-json.vercel.app/users/${user.id}`, {
         method: "PATCH",
         body: JSON.stringify({
             ...user,
