@@ -24,7 +24,7 @@ This is my first React project with TypeScript done by me, Ali Hourag.
 * Possibility of being a guest and logging in as a normal user.
 * Mobile first design!
 
-<a href="https://drive.google.com/file/d/1d9SejhiKvgIX4ccd8Bjkn_RCrC2yIQfj/view?usp=sharing">Click here to see a demonstration of how to use!</a><br />
+<a href="https://drive.google.com/file/d/1AnH9Yi05AtIMtzybyvUTp7SuZHiQ7BGL/view?usp=sharing">Click here to see a demonstration of how to use!</a><br />
 <a href="https://drive.google.com/file/d/18yLFURkBJC05grv-hi_cv67PC1FBwtcO/view?usp=sharing">Click here to see an explanation of the project, code, demo and server interaction!</a>
 
 ## Technologies
