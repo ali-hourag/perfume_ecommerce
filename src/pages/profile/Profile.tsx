@@ -26,7 +26,7 @@ export const Profile = () => {
 
     return (
         <section className="profile-container">
-            <img src="/src/assets/img/sunnah-musk.avif" />
+            <img src="https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745286/perfume_ecommerce/sunnah-musk_rj1kim.avif" />
             <section className="login-register-container">
                 <Outlet />
             </section>

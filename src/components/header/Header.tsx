@@ -58,7 +58,7 @@ export const Header: FC = () => {
     return (
         <header className="header">
             <AiOutlineMenu className="header_icon-menu" onClick={showSidebarLeft} />
-            <img src="/src/assets/img/sunnah-musk.avif" onClick={handleLogoClicked} />
+            <img src="https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745286/perfume_ecommerce/sunnah-musk_rj1kim.avif" onClick={handleLogoClicked} />
             <AiOutlineSearch className="header_icon-search" onClick={showSidebarRight} />
             <div className="cart-icon-container" onClick={handleCartClicked}>
                 <AiOutlineShoppingCart className="header_icon-cart" />

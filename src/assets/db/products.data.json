@@ -3,7 +3,7 @@
     {
       "title": "ABID AMBRE",
       "id": "product0",
-      "img": "perfume0.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744595/perfume_ecommerce/perfume0_qtfvoq.webp",
       "type": "eau-de-parfume",
       "for": "him",
       "topSeller": true,
@@ -15,7 +15,7 @@
     {
       "title": "GOLDEN DUST",
       "id": "product1",
-      "img": "perfume1.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744649/perfume_ecommerce/perfume1_mkk4ix.webp",
       "type": "eau-de-parfume",
       "for": "him-her",
       "topSeller": true,
@@ -27,7 +27,7 @@
     {
       "title": "AMBER ROSE",
       "id": "product2",
-      "img": "perfume2.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744678/perfume_ecommerce/perfume2_w5w0vx.webp",
       "type": "eau-de-parfume",
       "for": "her",
       "topSeller": true,
@@ -39,7 +39,7 @@
     {
       "title": "WOOD DE AMBER",
       "id": "product3",
-      "img": "perfume3.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744704/perfume_ecommerce/perfume3_udqzoc.webp",
       "type": "eau-de-parfume",
       "for": "him",
       "topSeller": false,
@@ -51,7 +51,7 @@
     {
       "title": "MAJESTIC",
       "id": "product4",
-      "img": "perfume4.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744734/perfume_ecommerce/perfume4_jprdae.webp",
       "type": "eau-de-parfume",
       "for": "him",
       "topSeller": false,
@@ -63,7 +63,7 @@
     {
       "title": "VICTORY",
       "id": "product5",
-      "img": "perfume5.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744771/perfume_ecommerce/perfume5_yueqvl.webp",
       "type": "eau-de-parfume",
       "for": "him-her",
       "topSeller": false,
@@ -75,7 +75,7 @@
     {
       "title": "NIGHT ILLUSION",
       "id": "product6",
-      "img": "perfume6.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744791/perfume_ecommerce/perfume6_rinbzy.webp",
       "type": "eau-de-parfume",
       "for": "her",
       "topSeller": true,
@@ -87,7 +87,7 @@
     {
       "title": "ZEYARA",
       "id": "product7",
-      "img": "perfume7.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744810/perfume_ecommerce/perfume7_jvkuir.webp",
       "type": "eau-de-parfume",
       "for": "her",
       "topSeller": false,
@@ -99,7 +99,7 @@
     {
       "title": "SWEET ESCAPE",
       "id": "product8",
-      "img": "perfume8.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744832/perfume_ecommerce/perfume8_mnkfuh.webp",
       "type": "eau-de-parfume",
       "for": "her",
       "topSeller": false,
@@ -111,7 +111,7 @@
     {
       "title": "AFGAN OUD",
       "id": "product9",
-      "img": "perfume9.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744848/perfume_ecommerce/perfume9_dlwz09.webp",
       "type": "eau-de-parfume",
       "for": "him",
       "topSeller": false,
@@ -123,7 +123,7 @@
     {
       "title": "EMIRATES",
       "id": "oil0",
-      "img": "oil0.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744869/perfume_ecommerce/oil0_xkdvsi.webp",
       "type": "oil-fragrance",
       "for": "him",
       "topSeller": true,
@@ -135,7 +135,7 @@
     {
       "title": "OUD MUQADDAS OIL",
       "id": "oil1",
-      "img": "oil1.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744896/perfume_ecommerce/oil1_kbdrcb.webp",
       "type": "oil-fragrance",
       "for": "him-her",
       "topSeller": false,
@@ -147,7 +147,7 @@
     {
       "title": "SANDAL ROSE",
       "id": "oil2",
-      "img": "oil2.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744917/perfume_ecommerce/oil2_ctywec.webp",
       "type": "oil-fragrance",
       "for": "her",
       "topSeller": false,
@@ -159,7 +159,7 @@
     {
       "title": "SHAF X",
       "id": "oil3",
-      "img": "oil3.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744938/perfume_ecommerce/oil3_djzp4z.webp",
       "type": "oil-fragrance",
       "for": "him",
       "topSeller": false,
@@ -171,7 +171,7 @@
     {
       "title": "PINKY",
       "id": "oil4",
-      "img": "oil4.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744957/perfume_ecommerce/oil4_wnabwo.webp",
       "type": "oil-fragrance",
       "for": "her",
       "topSeller": true,
@@ -183,7 +183,7 @@
     {
       "title": "YOUTH SPIRIT",
       "id": "oil5",
-      "img": "oil5.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744974/perfume_ecommerce/oil5_crtia5.webp",
       "type": "oil-fragrance",
       "for": "him-her",
       "topSeller": false,
@@ -195,7 +195,7 @@
     {
       "title": "OUD AL HARAMAIN",
       "id": "oil6",
-      "img": "oil6.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744994/perfume_ecommerce/oil6_imrfnx.webp",
       "type": "oil-fragrance",
       "for": "him",
       "topSeller": true,
@@ -207,7 +207,7 @@
     {
       "title": "ORIGINAL SERIES GIFT SET",
       "id": "gift0",
-      "img": "gift0.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745012/perfume_ecommerce/gift0_kximbr.webp",
       "type": "gift-box",
       "for": "him-her",
       "topSeller": false,
@@ -219,7 +219,7 @@
     {
       "title": "SOFT PARADISE GIFT SET",
       "id": "gift1",
-      "img": "gift1.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745036/perfume_ecommerce/gift1_il7hxc.webp",
       "type": "gift-box",
       "for": "him",
       "topSeller": false,
@@ -231,7 +231,7 @@
     {
       "title": "NIGHT ILLUSION GIFT SET",
       "id": "gift2",
-      "img": "gift2.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745058/perfume_ecommerce/gift2_ekfb8h.webp",
       "type": "gift-box",
       "for": "her",
       "topSeller": true,
@@ -243,7 +243,7 @@
     {
       "title": "DISCOVERY PERFUME COLLECTION",
       "id": "gift3",
-      "img": "gift3.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745074/perfume_ecommerce/gift3_wcz6eh.webp",
       "type": "gift-box",
       "for": "him-her",
       "topSeller": false,
@@ -255,7 +255,7 @@
     {
       "title": "WOMEN'S FRAGRANCE OIL GIFT SET",
       "id": "gift4",
-      "img": "gift4.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745090/perfume_ecommerce/gift4_cd3w30.webp",
       "type": "gift-box",
       "for": "her",
       "topSeller": false,
@@ -267,7 +267,7 @@
     {
       "title": "DISCOVERY OIL COLLECTION",
       "id": "gift5",
-      "img": "gift5.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745110/perfume_ecommerce/gift5_s3zqss.webp",
       "type": "gift-box",
       "for": "him-her",
       "topSeller": false,
@@ -279,7 +279,7 @@
     {
       "title": "SCENTED CANDLE BUNDLE",
       "id": "gift6",
-      "img": "gift6.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745126/perfume_ecommerce/gift6_lmrwv3.webp",
       "type": "gift-box",
       "for": "him-her",
       "topSeller": false,
@@ -291,7 +291,7 @@
     {
       "title": "EMERALD BURNER BUNDLE",
       "id": "gift7",
-      "img": "gift7.webp",
+      "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745144/perfume_ecommerce/gift7_uxkxm8.webp",
       "type": "gift-box",
       "for": "him-her",
       "topSeller": false,
@@ -320,7 +320,7 @@
         {
           "title": "ABID AMBRE",
           "id": "product0",
-          "img": "perfume0.webp",
+          "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744595/perfume_ecommerce/perfume0_qtfvoq.webp",
           "price": 69.91
         }
       ]
@@ -335,20 +335,20 @@
         {
           "title": "GOLDEN DUST",
           "id": "product1",
-          "img": "perfume1.webp",
+          "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744649/perfume_ecommerce/perfume1_mkk4ix.webp",
           "price": 69.91
         },
         {
           "title": "ORIGINAL SERIES GIFT SET",
           "id": "gift0",
-          "img": "gift0.webp",
+          "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745012/perfume_ecommerce/gift0_kximbr.webp",
           "price": 199.99,
           "quantity": 2
         },
         {
           "title": "AMBER ROSE",
           "id": "product2",
-          "img": "perfume2.webp",
+          "img": "https://res.cloudinary.com/dqdysl9ep/image/upload/v1697744678/perfume_ecommerce/perfume2_w5w0vx.webp",
           "price": 79.91,
           "quantity": 0
         }

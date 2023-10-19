@@ -18,15 +18,15 @@
 }
 
 .home-page_entry_premium {
-    background-image: url("../../assets/img/premium-fragrances.webp");
+    background-image: url("https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745266/perfume_ecommerce/premium-fragrances_levwkj.webp");
 }
 
 .home-page_entry_oil {
-    background-image: url("../../assets/img/oil-fragrance.webp");
+    background-image: url("https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745162/perfume_ecommerce/oil-fragrance_zilscb.webp");
 }
 
 .home-page_entry_gift {
-    background-image: url("../../assets/img/gift-home-page.webp");
+    background-image: url("https://res.cloudinary.com/dqdysl9ep/image/upload/v1697745196/perfume_ecommerce/gift-home-page_dqnmeg.webp");
 }
 
 .entry-type_heading,
