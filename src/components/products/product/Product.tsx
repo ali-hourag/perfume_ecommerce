@@ -59,7 +59,7 @@ export const Product: FC<ProductProps> = ({ title, id, img, price, intensity }) 
                 reverseOrder={false}
             />
             <BsHeart className={`product-card-wishlist_icon ${activeHeart ? "active-heart" : ""}`} onClick={handleHeartClicked} />
-            <img src={`/src/assets/img/${img}`} className="product-card_img" />
+            <img src={`${img}`} className="product-card_img" />
             <div className="product-card_info">
                 <p className="product-card_title">{title}</p>
                 <p className="product-card_price">{price} &euro;</p>

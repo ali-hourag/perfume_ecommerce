@@ -85,7 +85,7 @@ export const ProductInfo: FC<ProductInfoProps> = ({ product }) => {
                 position="bottom-right"
                 reverseOrder={false}
             />
-            <img src={`/src/assets/img/${img}`} className="product-info_img" />
+            <img src={`${img}`} className="product-info_img" />
             <h2 className="product-info_title">{title}</h2>
             <p className="product-info_price">{price} &euro;</p>
             <p className="product-info_description">{description}</p>

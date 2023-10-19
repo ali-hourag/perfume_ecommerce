@@ -23,7 +23,7 @@ export const Wishlist = () => {
             {wishlist.length === 0 && <UnavailableProducts />}
             {wishlist.length > 0 && wishlist.map((product) => (
                 <div className="wishlist-entry-container" key={product.id}>
-                    <img src={`/src/assets/img/${product.img}`} className="wishlist-img" />
+                    <img src={`${product.img}`} className="wishlist-img" />
                     <div className="wishlist-info">
                         <h4 className="wishlist-info-h4">{product.title}</h4>
                         <p>{product.price} &euro;</p>

@@ -57,7 +57,7 @@ export const SidebarRight: FC<SideBarRightProps> = ({ showSidebarRight, changeSi
                         }).map(({ id, img, title, price }) => {
                             return (
                                 <li key={id} className="results-product-card" onClick={() => handleEntryProductClicked(id)}>
-                                    <img src={`/src/assets/img/${img}`} className="sidebar-product-card_img" />
+                                    <img src={`${img}`} className="sidebar-product-card_img" />
                                     <div className="sidebar-product-card_info">
                                         <h4>{title}</h4>
                                         <p className="sidebar-product-card_info-p">{price}&euro;</p>

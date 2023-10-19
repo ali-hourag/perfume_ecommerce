@@ -84,7 +84,7 @@ export const Cart = () => {
             {cart.length === 0 && !checkout && <UnavailableProducts />}
             {cart.length > 0 && !checkout && cart.map((product) => (
                 <div className="wishlist-entry-container" key={product.id}>
-                    <img src={`/src/assets/img/${product.img}`} className="wishlist-img" onClick={() => handleProductClicked(product.id)} />
+                    <img src={`${product.img}`} className="wishlist-img" onClick={() => handleProductClicked(product.id)} />
                     <div className="wishlist-info">
                         <h4 className="wishlist-info-h4">{product.title}</h4>
                         <p>{product.price} &euro;</p>
