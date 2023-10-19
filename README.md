@@ -25,6 +25,7 @@ This is my first React project with TypeScript done by me, Ali Hourag.
 * Mobile first design!
 
 <a href="https://drive.google.com/file/d/1d9SejhiKvgIX4ccd8Bjkn_RCrC2yIQfj/view?usp=sharing">Click here to see a demonstration of how to use!</a>
+<a href="https://drive.google.com/file/d/18yLFURkBJC05grv-hi_cv67PC1FBwtcO/view?usp=sharing">Click here to see an explanation of the project, code, demo and server interaction!</a>
 
 ## Technologies
 - HTML
