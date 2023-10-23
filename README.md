@@ -16,19 +16,22 @@
 
 ## About
 
-This is my first React project with TypeScript done by me, Ali Hourag. 
+I am here to present you my first **React project**, which is an **e-commerce** store, more specifically mine was a woody perfumes online shop called Sunnah Musk, since fragrances are a passion of mine, I am excited I get to share it with you!
 <br/>
-* It uses different libraries like react-hook-form for form validation.
-* React-hot-toast has been implemented for dinamic notifications.
-* React-icons library has been used for icon importation.
-* React-router-dom has been very helpful for routing.
-* Product filtration by 4 parameters!
-* Search products dynamically.
-* Possibility of being a guest and logging in as a normal user.
-* Mobile first design!
-
+<ul>
+  <li>It has been done using <strong>TypeScript</strong> as always and different libraries like <strong>react-hook-form</strong> that facilitates form validation, <strong>react-hot-toast</strong> to show notifications of what is happening and enhance <strong>UX/UI</strong>.</li>
+  <li>Not only that, but other libraries have been used to insert icons like <strong>react-icons</strong> and <strong>react-router-dom</strong> to enable dynamic routing in my web application.</li>
+  <li>As you can see in the demo or video I linked, by clicking on the top left of the app you can make a <strong>product filtration</strong> by fragrance type, for who the fragrance is, price and if it is a top seller fragrance.</li>
+  <li> Furthermore, a <strong>dynamic</strong> search box appears if clicked at top right to make things easier for you if you already have something in mind!</li>
+  <li>A great attention has been put into <strong>UX/UI</strong>, <strong>component interaction with React</strong>, <strong>best practices</strong>, <strong>clean</strong>, <strong>maintainable</strong> and <strong>scalable code</strong> by modularizing and using <strong>React contexts and reducers</strong> as well as <strong>hooks</strong> such as <strong>useState, useEffect, useNavigate, useLocation and useParams.</strong></li>
+  <li>Last but not least, I created a simple <strong>json server</strong> in which I store the app information and make users able to store products in the <strong>wishlist</strong> and cart as well as making the admin able to <strong>insert</strong> products and <strong>modify</strong> their information.
+Calls to the server are made with <strong>API</strong> requests from different components to <strong>get products or users, create, modify or delete them</strong>. A great focus was given to making the necessary api requests without overwhelming the app by using contexts and React functionalities!</li>
+  <li>At the time, only mobile version is available! To access, after going to the link, right click > inspect > click the mobile logo at the top left > choose iPhone 12 (enhanced for this device). Don't worry, responsiveness is on the way...!</li>
+</ul>
+<div align="center"> 
 <a href="https://drive.google.com/file/d/1AnH9Yi05AtIMtzybyvUTp7SuZHiQ7BGL/view?usp=sharing">Click here to see a demonstration of how to use!</a><br />
 <a href="https://drive.google.com/file/d/18yLFURkBJC05grv-hi_cv67PC1FBwtcO/view?usp=sharing">Click here to see an explanation of the project, code, demo and server interaction!</a>
+</div>
 
 ## Technologies
 - HTML
