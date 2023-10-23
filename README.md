@@ -38,7 +38,8 @@ Calls to the server are made with <strong>API</strong> requests from different c
 - CSS
 - TypeScript
 - React
-- JSON Server
+- JSON Server -> link to the json server repo is <a href="https://github.com/ali-hourag/perfume_ecommerce_json">here!</a>
+  
 
 
 ## Setup
