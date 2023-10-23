@@ -45,6 +45,7 @@ Calls to the server are made with <strong>API</strong> requests from different c
 ## Setup
 You can open the deployed App on Vercel by clicking <a href="https://perfume-ecommerce.vercel.app/">here</a>!
 <br />
+<br/>
 If you want run it directly from code you will need to open 2 terminals and run the following commands on each one:
 - npm run server to run the simple json data on localhost:3000
 - npm run dev to run the project and open it through the localhost:5173
