@@ -1,9 +1,12 @@
 # PERFUME ECOMMERCE APP 📱
 
+<div align="center">
 <img src="https://github.com/ali-hourag/perfume_ecommerce/assets/131694498/3882fede-6496-4767-ac78-299d08e81ac4" width="300" height="606"/>
 <img src="https://github.com/ali-hourag/perfume_ecommerce/assets/131694498/2771e403-a2d0-4a5a-8fbb-8e40befa32a2" width="300" height="606"/>
+  <br/>
 <img src="https://github.com/ali-hourag/perfume_ecommerce/assets/131694498/eb2f089d-9e19-4fd9-b61b-bd1ab8ec31a2" width="300" height="606"/>
-
+<img src="https://github.com/ali-hourag/perfume_ecommerce/assets/131694498/f297443d-928d-48bd-8ca0-13cb752c51bf" width="300" height="606"/>
+</div>
 
 ## Table of Content:
 
